@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Avogadro::QtGui::RWMolecule &#8212; Avogadro 1.100.0 documentation</title>
+    <title>Avogadro::QtGui::RWMolecule &#8212; Avogadro 1.103.0 documentation</title>
   
   
   
@@ -33,13 +33,14 @@
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ee427ece" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mermaid-theme.css?v=7f85688a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=d87f2dab"></script>
+    <script src="../../_static/documentation_options.js?v=4a00f340"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -55,8 +56,8 @@
     <link rel="canonical" href="https://two.avogadro.cc/develop/class/class_avogadro_1_1_qt_gui_1_1_r_w_molecule.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Avogadro::QtGui::ScenePlugin" href="class_avogadro_1_1_qt_gui_1_1_scene_plugin.html" />
-    <link rel="prev" title="Avogadro::QtGui::RWBond" href="class_avogadro_1_1_qt_gui_1_1_r_w_bond.html" />
+    <link rel="next" title="Avogadro::QtGui::RichTextDelegate" href="class_avogadro_1_1_qt_gui_1_1_rich_text_delegate.html" />
+    <link rel="prev" title="Avogadro::QtGui::RWLayerManager" href="class_avogadro_1_1_qt_gui_1_1_r_w_layer_manager.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -136,11 +137,9 @@
       
     
     
-    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt=""/>
-    <script>document.write(`<img src="../../_static/avogadro2.png" class="logo__image only-dark" alt=""/>`);</script>
+    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt="Avogadro Documentation- Home"/>
+    <script>document.write(`<img src="../../_static/avogadro2-dark.png" class="logo__image only-dark" alt="Avogadro Documentation- Home"/>`);</script>
   
-  
-    <p class="title logo__title">Avogadro</p>
   
 </a></div>
     
@@ -434,17 +433,17 @@ document.write(`
   <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Develop</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../structure.html">Project Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../build.html">Building Source Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../scripts/index.html">Script Plugins</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rpc.html">Avogadro Remote Procedure Call (RPC)</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../classlist.html">API Documentation</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../structure.html">Project Structure and C++ API</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../avogadroapp.html">Avogadro App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calc.html">Avogadro::Calc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../core.html">Avogadro::Core</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../io.html">Avogadro::IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../molequeue.html">Avogadro::MoleQueue</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../qtgui.html">Avogadro::QtGui</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_background_file_format.html">Avogadro::QtGui::BackgroundFileFormat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_chart_dialog.html">Avogadro::QtGui::ChartDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_chart_widget.html">Avogadro::QtGui::ChartWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_color_button.html">Avogadro::QtGui::ColorButton</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_container_widget.html">Avogadro::QtGui::ContainerWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_custom_element_dialog.html">Avogadro::QtGui::CustomElementDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_element_detail.html">Avogadro::QtGui::ElementDetail</a></li>
@@ -454,11 +453,15 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_extension_plugin_factory.html">Avogadro::QtGui::ExtensionPluginFactory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_file_browse_widget.html">Avogadro::QtGui::FileBrowseWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_file_format_dialog.html">Avogadro::QtGui::FileFormatDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_gaussian_set_concurrent.html">Avogadro::QtGui::GaussianSetConcurrent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_generic_highlighter.html">Avogadro::QtGui::GenericHighlighter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_generic_highlighter_1_1_rule.html">Avogadro::QtGui::GenericHighlighter::Rule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_hydrogen_tools.html">Avogadro::QtGui::HydrogenTools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_insert_fragment_dialog.html">Avogadro::QtGui::InsertFragmentDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_interface_script.html">Avogadro::QtGui::InterfaceScript</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_interface_widget.html">Avogadro::QtGui::InterfaceWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_json_widget.html">Avogadro::QtGui::JsonWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_layer_model.html">Avogadro::QtGui::LayerModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_mesh_generator.html">Avogadro::QtGui::MeshGenerator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_molecule.html">Avogadro::QtGui::Molecule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_molecule_model.html">Avogadro::QtGui::MoleculeModel</a></li>
@@ -467,14 +470,20 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_periodic_table_view.html">Avogadro::QtGui::PeriodicTableView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_persistent_atom.html">Avogadro::QtGui::PersistentAtom</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_persistent_bond.html">Avogadro::QtGui::PersistentBond</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_plugin_layer_manager.html">Avogadro::QtGui::PluginLayerManager</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_python_script.html">Avogadro::QtGui::PythonScript</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_r_w_atom.html">Avogadro::QtGui::RWAtom</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_r_w_bond.html">Avogadro::QtGui::RWBond</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_r_w_layer_manager.html">Avogadro::QtGui::RWLayerManager</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Avogadro::QtGui::RWMolecule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_rich_text_delegate.html">Avogadro::QtGui::RichTextDelegate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_scene_plugin.html">Avogadro::QtGui::ScenePlugin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_scene_plugin_factory.html">Avogadro::QtGui::ScenePluginFactory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_scene_plugin_model.html">Avogadro::QtGui::ScenePluginModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_script_loader.html">Avogadro::QtGui::ScriptLoader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_slater_set_concurrent.html">Avogadro::QtGui::SlaterSetConcurrent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_sort_filter_tree_proxy_model.html">Avogadro::QtGui::SortFilterTreeProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_timed_progress_dialog.html">Avogadro::QtGui::TimedProgressDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_tool_plugin.html">Avogadro::QtGui::ToolPlugin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_tool_plugin_factory.html">Avogadro::QtGui::ToolPluginFactory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_view_factory.html">Avogadro::QtGui::ViewFactory</a></li>
@@ -485,9 +494,13 @@ document.write(`
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../qtplugins.html">Avogadro::QtPlugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../rendering.html">Avogadro::Rendering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vtk.html">Avogadro::VTK</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../build.html">Building Source Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scripts/index.html">Script Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rpc.html">Avogadro Remote Procedure Call (RPC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/code.html">Contributing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/ai-usage.html">AI Usage Policy</a></li>
 </ul>
 </div>
 </nav></div>
@@ -1171,6 +1184,37 @@ document.write(`
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro5QtGui10RWMolecule7isotopeE5Index">
+<span id="_CPPv3NK8Avogadro5QtGui10RWMolecule7isotopeE5Index"></span><span id="_CPPv2NK8Avogadro5QtGui10RWMolecule7isotopeE5Index"></span><span id="Avogadro::QtGui::RWMolecule::isotope__IndexC"></span><span class="target" id="class_avogadro_1_1_qt_gui_1_1_r_w_molecule_1a02088eb0dc8f72ac019c809d554f7c7c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isotope</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atomId</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro5QtGui10RWMolecule7isotopeE5Index" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the isotope for the requested atom. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>atomId</strong> – The index of the atom. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The isotope of the atom indexed at <em>atomId</em>, or 0 if <em>atomId</em> is invalid. (default is 0 for most common isotope) </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro5QtGui10RWMolecule10setIsotopeE5Indext">
+<span id="_CPPv3N8Avogadro5QtGui10RWMolecule10setIsotopeE5Indext"></span><span id="_CPPv2N8Avogadro5QtGui10RWMolecule10setIsotopeE5Indext"></span><span id="Avogadro::QtGui::RWMolecule::setIsotope__Index.unsigned-short"></span><span class="target" id="class_avogadro_1_1_qt_gui_1_1_r_w_molecule_1a71ba2a20d69dec7f5d877b9c34a8a12e"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setIsotope</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atomId</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">isotope</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro5QtGui10RWMolecule10setIsotopeE5Indext" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set the isotope of a single atom. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atomId</strong> – The index of the atom to modify. </p></li>
+<li><p><strong>isotope</strong> – The new isotope </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True on success, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro5QtGui10RWMolecule5colorE5Index">
 <span id="_CPPv3NK8Avogadro5QtGui10RWMolecule5colorE5Index"></span><span id="_CPPv2NK8Avogadro5QtGui10RWMolecule5colorE5Index"></span><span id="Avogadro::QtGui::RWMolecule::color__IndexC"></span><span class="target" id="class_avogadro_1_1_qt_gui_1_1_r_w_molecule_1a48ebdf3a1dcc8c7b86ddf70a3d32e51a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">Vector3ub</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">color</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atomId</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro5QtGui10RWMolecule5colorE5Index" title="Link to this definition">#</a><br /></dt>
 <dd><p>Get the color for the requested atom. </p>
@@ -1192,6 +1236,23 @@ document.write(`
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>atomId</strong> – The index of the atom to modify. </p></li>
+<li><p><strong>color</strong> – The new color. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True on success, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro5QtGui10RWMolecule15setResidueColorE5Index9Vector3ub">
+<span id="_CPPv3N8Avogadro5QtGui10RWMolecule15setResidueColorE5Index9Vector3ub"></span><span id="_CPPv2N8Avogadro5QtGui10RWMolecule15setResidueColorE5Index9Vector3ub"></span><span id="Avogadro::QtGui::RWMolecule::setResidueColor__Index.Vector3ub"></span><span class="target" id="class_avogadro_1_1_qt_gui_1_1_r_w_molecule_1ab4c48275c5957532994aafa1785f9957"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setResidueColor</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">residueId</span></span>, <span class="n"><span class="pre">Vector3ub</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">color</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro5QtGui10RWMolecule15setResidueColorE5Index9Vector3ub" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set the color of a single residue. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>residueId</strong> – The index of the residue to modify. </p></li>
 <li><p><strong>color</strong> – The new color. </p></li>
 </ul>
 </dd>
@@ -1480,6 +1541,20 @@ document.write(`
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro5QtGui10RWMolecule10addResidueERKN4Core7ResidueE5Index">
+<span id="_CPPv3N8Avogadro5QtGui10RWMolecule10addResidueERKN4Core7ResidueE5Index"></span><span id="_CPPv2N8Avogadro5QtGui10RWMolecule10addResidueERKN4Core7ResidueE5Index"></span><span id="Avogadro::QtGui::RWMolecule::addResidue__Core::ResidueCR.Index"></span><span class="target" id="class_avogadro_1_1_qt_gui_1_1_r_w_molecule_1a921fab2fc4e2af9f9adf34f0f0fdf120"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addResidue</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Core</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_residue.html#_CPPv4N8Avogadro4Core7ResidueE" title="Avogadro::Core::Residue"><span class="n"><span class="pre">Residue</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">residue</span></span>, <span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro5QtGui10RWMolecule10addResidueERKN4Core7ResidueE5Index" title="Link to this definition">#</a><br /></dt>
+<dd><p>Add a residue to the molecule. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>residue</strong> – The residue to be added. </p></li>
+<li><p><strong>offset</strong> – The atomic index offset for the new residue. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8Avogadro5QtGui10RWMolecule14modifyMoleculeERK8MoleculeN8Molecule15MoleculeChangesERK7QString">
 <span id="_CPPv3N8Avogadro5QtGui10RWMolecule14modifyMoleculeERK8MoleculeN8Molecule15MoleculeChangesERK7QString"></span><span id="_CPPv2N8Avogadro5QtGui10RWMolecule14modifyMoleculeERK8MoleculeN8Molecule15MoleculeChangesERK7QString"></span><span id="Avogadro::QtGui::RWMolecule::modifyMolecule__MoleculeCR.Molecule::MoleculeChanges.QStringCR"></span><span class="target" id="class_avogadro_1_1_qt_gui_1_1_r_w_molecule_1a2cf0fe84ca23414c5e3b2cde5518887d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">modifyMolecule</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_molecule.html#_CPPv4N8Avogadro5QtGui8MoleculeE" title="Avogadro::QtGui::Molecule"><span class="n"><span class="pre">Molecule</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newMolecule</span></span>, <a class="reference internal" href="class_avogadro_1_1_qt_gui_1_1_molecule.html#_CPPv4N8Avogadro5QtGui8MoleculeE" title="Avogadro::QtGui::Molecule"><span class="n"><span class="pre">Molecule</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MoleculeChanges</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">changes</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">undoText</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QStringLiteral</span></span><span class="p"><span class="pre">(</span></span><span class="s"><span class="pre">&quot;Modify</span> <span class="pre">Molecule&quot;</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro5QtGui10RWMolecule14modifyMoleculeERK8MoleculeN8Molecule15MoleculeChangesERK7QString" title="Link to this definition">#</a><br /></dt>
 <dd><p>Generic edit that changes the current molecule to be <em>newMolecule</em>. Also sets the text for the undo command to be <em>undoText</em>. Changes are emitted. </p>
@@ -1612,14 +1687,15 @@ document.write(`
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro5QtGui10RWMolecule12fillUnitCellEtd">
-<span id="_CPPv3N8Avogadro5QtGui10RWMolecule12fillUnitCellEtd"></span><span id="_CPPv2N8Avogadro5QtGui10RWMolecule12fillUnitCellEtd"></span><span id="Avogadro::QtGui::RWMolecule::fillUnitCell__unsigned-short.double"></span><span class="target" id="class_avogadro_1_1_qt_gui_1_1_r_w_molecule_1a825a01a58c7646034aa7326edf08f1bb"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fillUnitCell</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">hallNumber</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">cartTol</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1e-5</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro5QtGui10RWMolecule12fillUnitCellEtd" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro5QtGui10RWMolecule12fillUnitCellEtdb">
+<span id="_CPPv3N8Avogadro5QtGui10RWMolecule12fillUnitCellEtdb"></span><span id="_CPPv2N8Avogadro5QtGui10RWMolecule12fillUnitCellEtdb"></span><span id="Avogadro::QtGui::RWMolecule::fillUnitCell__unsigned-short.double.b"></span><span class="target" id="class_avogadro_1_1_qt_gui_1_1_r_w_molecule_1a3a3c0a38032c7498d0143933e6ea406a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fillUnitCell</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">hallNumber</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">cartTol</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1e-5</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">allCopies</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro5QtGui10RWMolecule12fillUnitCellEtdb" title="Link to this definition">#</a><br /></dt>
 <dd><p>Fill unit cell using transforms for the space group. Changes are emitted. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>hallNumber</strong> – The hall number to be used for transforming the cell. </p></li>
 <li><p><strong>cartTol</strong> – Cartesian tolerance for comparing atom positions. </p></li>
+<li><p><strong>allCopies</strong> – If true, all copies will be filled (i.e. edges and corners) </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1842,20 +1918,20 @@ The <code class="docutils literal notranslate"><span class="pre">change</span></
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="class_avogadro_1_1_qt_gui_1_1_r_w_bond.html"
+       href="class_avogadro_1_1_qt_gui_1_1_r_w_layer_manager.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Avogadro::QtGui::RWBond</p>
+        <p class="prev-next-title">Avogadro::QtGui::RWLayerManager</p>
       </div>
     </a>
     <a class="right-next"
-       href="class_avogadro_1_1_qt_gui_1_1_scene_plugin.html"
+       href="class_avogadro_1_1_qt_gui_1_1_rich_text_delegate.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Avogadro::QtGui::ScenePlugin</p>
+        <p class="prev-next-title">Avogadro::QtGui::RichTextDelegate</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1928,8 +2004,11 @@ The <code class="docutils literal notranslate"><span class="pre">change</span></
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule16setHybridizationE5IndexN4Core17AtomHybridizationE"><code class="docutils literal notranslate"><span class="pre">RWMolecule::setHybridization()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro5QtGui10RWMolecule12formalChargeE5Index"><code class="docutils literal notranslate"><span class="pre">RWMolecule::formalCharge()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule15setFormalChargeE5Indexa"><code class="docutils literal notranslate"><span class="pre">RWMolecule::setFormalCharge()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro5QtGui10RWMolecule7isotopeE5Index"><code class="docutils literal notranslate"><span class="pre">RWMolecule::isotope()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule10setIsotopeE5Indext"><code class="docutils literal notranslate"><span class="pre">RWMolecule::setIsotope()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro5QtGui10RWMolecule5colorE5Index"><code class="docutils literal notranslate"><span class="pre">RWMolecule::color()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule8setColorE5Index9Vector3ub"><code class="docutils literal notranslate"><span class="pre">RWMolecule::setColor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule15setResidueColorE5Index9Vector3ub"><code class="docutils literal notranslate"><span class="pre">RWMolecule::setResidueColor()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule8setLayerE5Index6size_t"><code class="docutils literal notranslate"><span class="pre">RWMolecule::setLayer()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro5QtGui10RWMolecule5layerE5Index"><code class="docutils literal notranslate"><span class="pre">RWMolecule::layer()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro5QtGui10RWMolecule4bondE5Index"><code class="docutils literal notranslate"><span class="pre">RWMolecule::bond()</span></code></a></li>
@@ -1952,6 +2031,7 @@ The <code class="docutils literal notranslate"><span class="pre">change</span></
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule11setBondPairE5IndexRKNSt4pairI5Index5IndexEE"><code class="docutils literal notranslate"><span class="pre">RWMolecule::setBondPair()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule11addUnitCellEv"><code class="docutils literal notranslate"><span class="pre">RWMolecule::addUnitCell()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule14removeUnitCellEv"><code class="docutils literal notranslate"><span class="pre">RWMolecule::removeUnitCell()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule10addResidueERKN4Core7ResidueE5Index"><code class="docutils literal notranslate"><span class="pre">RWMolecule::addResidue()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule14modifyMoleculeERK8MoleculeN8Molecule15MoleculeChangesERK7QString"><code class="docutils literal notranslate"><span class="pre">RWMolecule::modifyMolecule()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule14appendMoleculeERK8MoleculeRK7QString"><code class="docutils literal notranslate"><span class="pre">RWMolecule::appendMolecule()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule12editUnitCellE7Matrix3N4Core12CrystalTools7OptionsE"><code class="docutils literal notranslate"><span class="pre">RWMolecule::editUnitCell()</span></code></a></li>
@@ -1963,7 +2043,7 @@ The <code class="docutils literal notranslate"><span class="pre">change</span></
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule21reduceCellToPrimitiveEd"><code class="docutils literal notranslate"><span class="pre">RWMolecule::reduceCellToPrimitive()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule19conventionalizeCellEd"><code class="docutils literal notranslate"><span class="pre">RWMolecule::conventionalizeCell()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule14symmetrizeCellEd"><code class="docutils literal notranslate"><span class="pre">RWMolecule::symmetrizeCell()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule12fillUnitCellEtd"><code class="docutils literal notranslate"><span class="pre">RWMolecule::fillUnitCell()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule12fillUnitCellEtdb"><code class="docutils literal notranslate"><span class="pre">RWMolecule::fillUnitCell()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule26reduceCellToAsymmetricUnitEtd"><code class="docutils literal notranslate"><span class="pre">RWMolecule::reduceCellToAsymmetricUnit()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule14beginMergeModeERK7QString"><code class="docutils literal notranslate"><span class="pre">RWMolecule::beginMergeMode()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro5QtGui10RWMolecule12endMergeModeEv"><code class="docutils literal notranslate"><span class="pre">RWMolecule::endMergeMode()</span></code></a></li>
@@ -2030,7 +2110,7 @@ The <code class="docutils literal notranslate"><span class="pre">change</span></
     <div class="footer-items__start">
       
         <div class="footer-item">          <p>
-            ©2025 The OpenChemistry / Avogadro Teams 
+            ©2026 The OpenChemistry / Avogadro Teams 
           </p>
           <p>Covered by the <a href="https://github.com/openchemistry/avogadrolibs/blob/master/CODE_OF_CONDUCT.md">Avogadro Code of Conduct</a>.
           </p></div>

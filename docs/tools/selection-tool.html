@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Selection Tool &#8212; Avogadro 1.100.0 documentation</title>
+    <title>Selection Tool &#8212; Avogadro 1.103.0 documentation</title>
   
   
   
@@ -33,13 +33,14 @@
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ee427ece" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mermaid-theme.css?v=7f85688a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=d87f2dab"></script>
+    <script src="../../_static/documentation_options.js?v=4a00f340"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -56,7 +57,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Manipulation Tool" href="manipulation-tool.html" />
-    <link rel="prev" title="Label Tool" href="label-tool.html" />
+    <link rel="prev" title="Template Tool" href="template-tool.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -136,11 +137,9 @@
       
     
     
-    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt=""/>
-    <script>document.write(`<img src="../../_static/avogadro2.png" class="logo__image only-dark" alt=""/>`);</script>
+    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt="Avogadro Documentation- Home"/>
+    <script>document.write(`<img src="../../_static/avogadro2-dark.png" class="logo__image only-dark" alt="Avogadro Documentation- Home"/>`);</script>
   
-  
-    <p class="title logo__title">Avogadro</p>
   
 </a></div>
     
@@ -436,26 +435,26 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../whats-new-in-avogadro-2/index.html">What’s New in Avogadro 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building-molecules/index.html">Building Molecules</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Tools</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="navigation-tool.html">Navigation Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="draw-tool.html">Draw Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="template-tool.html">Template Tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="label-tool.html">Label Tool</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Selection Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manipulation-tool.html">Manipulation Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bond-centric-manipulation-tool.html">Bond-Centric Manipulation Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoopt-tool.html">AutoOptimization Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="measure-tool.html">Measure Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="animation-tool.html">Animation Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="align-tool.html">Align Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="label-tool.html">Label Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard-shortcuts.html">Keyboard Shortcuts</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../menus/index.html">Menus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../building-molecules/index.html">Building Molecules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../building-materials/index.html">Building Materials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../optimizing-geometry/index.html">Optimizing Geometry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../display-types/index.html">Display Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extensions/index.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimizing-geometry/index.html">Optimizing Geometry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings/index.html">Settings</a></li>
 </ul>
 </div>
 </nav></div>
@@ -519,14 +518,14 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="selection-tool">
 <span id="tools-selection-tool"></span><h1>Selection Tool<a class="headerlink" href="#selection-tool" title="Link to this heading">#</a></h1>
 <p><img alt="The icon of the Selection Tool in light mode." src="../../_images/icon_select.svg" /></p>
-<p>Keyboard shortcut: <kbd>Ctrl</kbd>+<kbd>5</kbd></p>
+<p>Keyboard shortcut: <kbd>Ctrl</kbd>+<kbd>4</kbd></p>
 <p>The <strong>Selection Tool</strong> is used to <strong>select atoms</strong> with the mouse, either by individually picking them out or using a marquee selection box.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Further useful selection functionality is available in the <a class="reference internal" href="../menus/select-menu.html#menus-select-menu"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Select</span></code> menu</span></a>.</p>
+<p>Further useful selection functionality is available in the <a class="reference internal" href="../menus/select-menu.html#menus-select-menu"><span class="std std-ref">Select menu</span></a>.</p>
 </div>
 <section id="basic-usage">
-<h2>Basic usage<a class="headerlink" href="#basic-usage" title="Link to this heading">#</a></h2>
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading">#</a></h2>
 <p><strong>Left-click</strong> on an individual atom to <strong>select</strong> it.</p>
 <p><a class="reference internal" href="../../_images/tutorial-select-atom.png"><img alt="A single atom selected after clicking on it." class="align-center" src="../../_images/tutorial-select-atom.png" style="height: 300px;" /></a></p>
 <p><strong>Left-click and drag</strong> to <strong>select multiple</strong> atoms by drawing a marquee selection box that covers the desired selection.</p>
@@ -536,7 +535,7 @@ document.write(`
 <p><a class="reference internal" href="../../_images/tutorial-select-all.png"><img alt="An entire molecule selected after clicking on one of its constituent atoms." class="align-center" src="../../_images/tutorial-select-all.png" style="height: 300px;" /></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Use <code class="docutils literal notranslate"><span class="pre">Select</span></code>⇒<code class="docutils literal notranslate"><span class="pre">Enlarge</span> <span class="pre">Selection</span></code> to increase the selection from an atom to only its immediate neighbors rather than the whole molecule.</p>
+<p>Use <strong>Select ⇒ Enlarge Selection</strong> to increase the selection from an atom to only its immediate neighbors rather than the whole molecule.</p>
 </div>
 <p>Holding <kbd>Shift</kbd> or <kbd>Ctrl</kbd> while doing the above actions modifies their behaviour.</p>
 <p>The effects of the modifier keys are best summarized in the table below:</p>
@@ -577,7 +576,7 @@ document.write(`
 </tbody>
 </table>
 </div>
-<p>Note that while <kbd>Ctrl</kbd> and <strong>double-left-click</strong> inverts the selection, this only affects <strong>connected atoms</strong>, whereas when <code class="docutils literal notranslate"><span class="pre">Select</span></code>⇒<code class="docutils literal notranslate"><span class="pre">Invert</span> <span class="pre">Selection</span></code> is used, the inversion applies to all atoms.</p>
+<p>Note that while <kbd>Ctrl</kbd> and <strong>double-left-click</strong> inverts the selection, this only affects <strong>connected atoms</strong>, whereas when <strong>Select ⇒ Invert Selection</strong> is used, the inversion applies to all atoms.</p>
 <p><strong>Select all atoms</strong> using the keyboard shortcut <kbd>Ctrl</kbd>+<kbd>A</kbd>.</p>
 <p><strong>Clear the selection</strong> by <strong>right-clicking</strong> in an empty part of the view pane or using the keyboard shortcut <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd>.</p>
 <div class="admonition tip">
@@ -589,8 +588,8 @@ document.write(`
 <p>A known bug means that right-clicking to clear the selection does not work on some systems. A triple-left-click on empty space or a left-click on any currently selected atom should do the trick instead.</p>
 </div>
 </section>
-<section id="pane-options">
-<h2>Pane options<a class="headerlink" href="#pane-options" title="Link to this heading">#</a></h2>
+<section id="options">
+<h2>Options<a class="headerlink" href="#options" title="Link to this heading">#</a></h2>
 <dl class="simple myst">
 <dt>Apply Color</dt><dd><p>Pick a color and apply it to the currently selected atoms.</p>
 <p>Clicking the colored rectangle will open a color picker.
@@ -601,6 +600,13 @@ After choosing a color, click <code class="docutils literal notranslate"><span c
 <p>See <a class="reference internal" href="#panes-layers"><span class="xref myst">Layers</span></a> for more information on how to use them.</p>
 </dd>
 </dl>
+</section>
+<section id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../menus/select-menu.html#menus-select-menu"><span class="std std-ref">Select Menu</span></a> – Additional selection methods (by element, residue, etc.)</p></li>
+<li><p><a class="reference internal" href="manipulation-tool.html#tools-manipulation-tool"><span class="std std-ref">Manipulation Tool</span></a> – Move selected atoms and fragments</p></li>
+</ul>
 </section>
 </section>
 
@@ -615,12 +621,12 @@ After choosing a color, click <code class="docutils literal notranslate"><span c
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="label-tool.html"
+       href="template-tool.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Label Tool</p>
+        <p class="prev-next-title">Template Tool</p>
       </div>
     </a>
     <a class="right-next"
@@ -650,8 +656,9 @@ After choosing a color, click <code class="docutils literal notranslate"><span c
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage">Basic usage</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pane-options">Pane options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage">Basic Usage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#options">Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#see-also">See Also</a></li>
 </ul>
   </nav></div>
 
@@ -693,7 +700,7 @@ After choosing a color, click <code class="docutils literal notranslate"><span c
     <div class="footer-items__start">
       
         <div class="footer-item">          <p>
-            ©2025 The OpenChemistry / Avogadro Teams 
+            ©2026 The OpenChemistry / Avogadro Teams 
           </p>
           <p>Covered by the <a href="https://github.com/openchemistry/avogadrolibs/blob/master/CODE_OF_CONDUCT.md">Avogadro Code of Conduct</a>.
           </p></div>

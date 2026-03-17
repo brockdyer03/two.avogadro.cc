@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Animation Tool &#8212; Avogadro 1.100.0 documentation</title>
+    <title>Animation Tool &#8212; Avogadro 1.103.0 documentation</title>
   
   
   
@@ -33,13 +33,14 @@
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ee427ece" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mermaid-theme.css?v=7f85688a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=d87f2dab"></script>
+    <script src="../../_static/documentation_options.js?v=4a00f340"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -136,11 +137,9 @@
       
     
     
-    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt=""/>
-    <script>document.write(`<img src="../../_static/avogadro2.png" class="logo__image only-dark" alt=""/>`);</script>
+    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt="Avogadro Documentation- Home"/>
+    <script>document.write(`<img src="../../_static/avogadro2-dark.png" class="logo__image only-dark" alt="Avogadro Documentation- Home"/>`);</script>
   
-  
-    <p class="title logo__title">Avogadro</p>
   
 </a></div>
     
@@ -436,26 +435,26 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../whats-new-in-avogadro-2/index.html">What’s New in Avogadro 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building-molecules/index.html">Building Molecules</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Tools</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="navigation-tool.html">Navigation Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="draw-tool.html">Draw Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="template-tool.html">Template Tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="label-tool.html">Label Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="selection-tool.html">Selection Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manipulation-tool.html">Manipulation Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bond-centric-manipulation-tool.html">Bond-Centric Manipulation Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoopt-tool.html">AutoOptimization Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="measure-tool.html">Measure Tool</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Animation Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="align-tool.html">Align Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="label-tool.html">Label Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard-shortcuts.html">Keyboard Shortcuts</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../menus/index.html">Menus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../building-molecules/index.html">Building Molecules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../building-materials/index.html">Building Materials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../optimizing-geometry/index.html">Optimizing Geometry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../display-types/index.html">Display Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extensions/index.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimizing-geometry/index.html">Optimizing Geometry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings/index.html">Settings</a></li>
 </ul>
 </div>
 </nav></div>
@@ -520,6 +519,32 @@ document.write(`
 <span id="tools-animation-tool"></span><h1>Animation Tool<a class="headerlink" href="#animation-tool" title="Link to this heading">#</a></h1>
 <p><img alt="The icon of the Animation Tool in light mode." src="../../_images/icon_player.svg" /></p>
 <p>Keyboard shortcut: <kbd>Ctrl</kbd>+<kbd>9</kbd></p>
+<section id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading">#</a></h2>
+<p>The animation tool allows you to view a sequence of multiple coordinate sets, whether part of a molecular dynamics trajectory, a geometry optimization, a reaction pathway, or a set of conformers.</p>
+<p><img alt="Screenshot of the animation panel" src="../../_images/animation.png" /></p>
+<p>The simplest option is to simply click <kbd>Play</kbd> to view the animation. It will loop through repeatedly until you click <kbd>Pause</kbd>.</p>
+<p>If you wish to move through the frames one by one, you can use the controls at the top of the panel:</p>
+<p><img alt="Screenshot of the animation panel indicating move buttons" src="../../_images/animate-move.png" /></p>
+<p>The slider can be used to drag between frames, or you can click the <kbd>&lt;</kbd> or <kbd>&gt;</kbd> buttons to move backwards (1) or forward (3) one frame at a time.</p>
+<p>If you wish to focus only on one part of the trajectory, you can use the Start and End controls, which will limit the range of the animation:</p>
+<p><img alt="Screenshot of the animation panel indicating start and end controls" src="../../_images/animate-start-end.png" /></p>
+<p>In some cases, an animation may include breaking or forming bonds. In this case, check “Dynamic bonding” for Avogadro to adjust bonds for each frame.</p>
+<p>Finally, to speed up or slow down the animation, you can control the Frame rate in frames per second (FPS):</p>
+<p><img alt="Screenshot of the animation panel indicating the frame rate control" src="../../_images/animate-fps.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can record the entire animation as a GIF or AVI file in Avogadro or save a set of PNG images to convert to an MP4 movie with the <a class="reference external" href="https://www.ffmpeg.org/">ffmpeg</a> package. The resolution will be identical to the current window.</p>
+</div>
+</section>
+<section id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../tutorials/viewing-vibrations.html#tutorials-viewing-vibrations"><span class="std std-ref">Viewing Vibrations</span></a> – Visualize vibrational modes from calculations</p></li>
+<li><p><a class="reference internal" href="../optimizing-geometry/conformers.html#optimize-conformers"><span class="std std-ref">Finding Conformers of Molecules</span></a> – Generate and explore molecular conformers</p></li>
+<li><p><a class="reference internal" href="navigation-tool.html#tools-navigation-tool"><span class="std std-ref">Navigation Tool</span></a> – Rotate and zoom the view during playback</p></li>
+</ul>
+</section>
 </section>
 
 
@@ -561,6 +586,19 @@ document.write(`
 
 
   <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage">Basic Usage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#see-also">See Also</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
 
   
   <div class="tocsection editthispage">
@@ -598,7 +636,7 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item">          <p>
-            ©2025 The OpenChemistry / Avogadro Teams 
+            ©2026 The OpenChemistry / Avogadro Teams 
           </p>
           <p>Covered by the <a href="https://github.com/openchemistry/avogadrolibs/blob/master/CODE_OF_CONDUCT.md">Avogadro Code of Conduct</a>.
           </p></div>

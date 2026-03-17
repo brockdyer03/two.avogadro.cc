@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Align Tool &#8212; Avogadro 1.100.0 documentation</title>
+    <title>Align Tool &#8212; Avogadro 1.103.0 documentation</title>
   
   
   
@@ -33,13 +33,14 @@
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ee427ece" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mermaid-theme.css?v=7f85688a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=d87f2dab"></script>
+    <script src="../../_static/documentation_options.js?v=4a00f340"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -55,7 +56,7 @@
     <link rel="canonical" href="https://two.avogadro.cc/docs/tools/align-tool.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Menus" href="../menus/index.html" />
+    <link rel="next" title="Label Tool" href="label-tool.html" />
     <link rel="prev" title="Animation Tool" href="animation-tool.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -136,11 +137,9 @@
       
     
     
-    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt=""/>
-    <script>document.write(`<img src="../../_static/avogadro2.png" class="logo__image only-dark" alt=""/>`);</script>
+    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt="Avogadro Documentation- Home"/>
+    <script>document.write(`<img src="../../_static/avogadro2-dark.png" class="logo__image only-dark" alt="Avogadro Documentation- Home"/>`);</script>
   
-  
-    <p class="title logo__title">Avogadro</p>
   
 </a></div>
     
@@ -436,26 +435,26 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../whats-new-in-avogadro-2/index.html">What’s New in Avogadro 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building-molecules/index.html">Building Molecules</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Tools</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="navigation-tool.html">Navigation Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="draw-tool.html">Draw Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="template-tool.html">Template Tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="label-tool.html">Label Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="selection-tool.html">Selection Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manipulation-tool.html">Manipulation Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bond-centric-manipulation-tool.html">Bond-Centric Manipulation Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoopt-tool.html">AutoOptimization Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="measure-tool.html">Measure Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="animation-tool.html">Animation Tool</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Align Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="label-tool.html">Label Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard-shortcuts.html">Keyboard Shortcuts</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../menus/index.html">Menus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../building-molecules/index.html">Building Molecules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../building-materials/index.html">Building Materials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../optimizing-geometry/index.html">Optimizing Geometry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../display-types/index.html">Display Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extensions/index.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimizing-geometry/index.html">Optimizing Geometry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings/index.html">Settings</a></li>
 </ul>
 </div>
 </nav></div>
@@ -519,30 +518,33 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="align-tool">
 <span id="tools-align-tool"></span><h1>Align Tool<a class="headerlink" href="#align-tool" title="Link to this heading">#</a></h1>
 <p><img alt="The icon of the Align Tool in light mode." src="../../_images/icon_align.svg" /></p>
-<p>The Align Tool is used to rotate and translate a molecule(s) so that it aligns with one of the Cartesian axes.</p>
+<p>The <strong>Align Tool</strong> is used to rotate and translate the current molecule so that it aligns with one of the Cartesian axes.</p>
 <section id="basic-usage">
-<h2>Basic usage<a class="headerlink" href="#basic-usage" title="Link to this heading">#</a></h2>
-<p>First, an alignment axis is chosen from the <code class="docutils literal notranslate"><span class="pre">Axis</span></code> drop-down menu in the Align Pane.
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading">#</a></h2>
+<p>First, an alignment axis is chosen from the <strong>Axis</strong> drop-down menu in the <strong>Align</strong> pane.
 The <kbd>x</kbd>, <kbd>y</kbd>, and <kbd>z</kbd> keys on the keyboard are shortcuts for changing the alignment axis.</p>
-<p>Secondly, select either one or two atoms in the view frame with the left mouse button.
-The labels #1 and #2 will be displayed on each.</p>
-<p>Clicking <code class="docutils literal notranslate"><span class="pre">Align</span></code> will then reposition the molecule as desired.</p>
+<p>Secondly, select either one or two atoms in the view pane with the left mouse button.
+The labels “#1” and “#2” will be displayed on each.</p>
+<p>Clicking <strong>Align</strong> will then reposition the molecule as desired.</p>
 <p>If only one atom was selected, the molecule will simply be translated so that it is placed at the origin (i.e. the Cartesian coordinates (0,0,0)).</p>
 <p>If two atoms were selected, the first will be placed at the origin, and the second will be placed along the chosen axis.</p>
+<p><img alt="" src="../../_images/align-atoms.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>The red axis is designated as the X axis, green is designated as the Y axis, and blue is designated as the Z axis.</p>
 </div>
 </section>
-<section id="pane-options">
-<h2>Pane options<a class="headerlink" href="#pane-options" title="Link to this heading">#</a></h2>
-<p><img alt="" src="../../_images/e3143779-956e-4d83-ac28-dc2f79bf2194.png" /></p>
-<p>The <code class="docutils literal notranslate"><span class="pre">Axis</span></code> drop-down menu allows you to choose which Cartesian axis the molecule will be aligned to.</p>
-<p><img alt="" src="../../_images/ec6c967d-5df0-41b8-b692-93123f8a0462.png" /></p>
-<p>By default, the relative positions of everything in the view frame will remain the same and the same transformation will be applied to all objects.
-By choosing the “Molecule” option in the <code class="docutils literal notranslate"><span class="pre">Align</span></code> drop-down menu in the Align Pane, only the molecule containing the selected atoms will be affected by the change.</p>
-<p><img alt="" src="../../_images/c1839173-f147-444d-b9c9-9ebb2e0a28f4.png" /></p>
-<p><img alt="" src="../../_images/ca04487a-6f68-45ca-a5bf-92a2daf99194.png" /></p>
+<section id="options">
+<h2>Options<a class="headerlink" href="#options" title="Link to this heading">#</a></h2>
+<p>The <strong>Axis</strong> drop-down menu allows you to choose which Cartesian axis the molecule will be aligned to.</p>
+<p><img alt="" src="../../_images/align-axis.png" /></p>
+</section>
+<section id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="manipulation-tool.html#tools-manipulation-tool"><span class="std std-ref">Manipulation Tool</span></a> – Manually translate and rotate molecules</p></li>
+<li><p><a class="reference internal" href="navigation-tool.html#tools-navigation-tool"><span class="std std-ref">Navigation Tool</span></a> – Rotate and pan the view</p></li>
+</ul>
 </section>
 </section>
 
@@ -566,11 +568,11 @@ By choosing the “Molecule” option in the <code class="docutils literal notra
       </div>
     </a>
     <a class="right-next"
-       href="../menus/index.html"
+       href="label-tool.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Menus</p>
+        <p class="prev-next-title">Label Tool</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -592,8 +594,9 @@ By choosing the “Molecule” option in the <code class="docutils literal notra
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage">Basic usage</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pane-options">Pane options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage">Basic Usage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#options">Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#see-also">See Also</a></li>
 </ul>
   </nav></div>
 
@@ -635,7 +638,7 @@ By choosing the “Molecule” option in the <code class="docutils literal notra
     <div class="footer-items__start">
       
         <div class="footer-item">          <p>
-            ©2025 The OpenChemistry / Avogadro Teams 
+            ©2026 The OpenChemistry / Avogadro Teams 
           </p>
           <p>Covered by the <a href="https://github.com/openchemistry/avogadrolibs/blob/master/CODE_OF_CONDUCT.md">Avogadro Code of Conduct</a>.
           </p></div>

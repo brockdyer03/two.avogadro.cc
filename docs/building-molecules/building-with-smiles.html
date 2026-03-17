@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Building with SMILES &#8212; Avogadro 1.100.0 documentation</title>
+    <title>Building with SMILES &#8212; Avogadro 1.103.0 documentation</title>
   
   
   
@@ -33,13 +33,14 @@
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ee427ece" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mermaid-theme.css?v=7f85688a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=d87f2dab"></script>
+    <script src="../../_static/documentation_options.js?v=4a00f340"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -136,11 +137,9 @@
       
     
     
-    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt=""/>
-    <script>document.write(`<img src="../../_static/avogadro2.png" class="logo__image only-dark" alt=""/>`);</script>
+    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt="Avogadro Documentation- Home"/>
+    <script>document.write(`<img src="../../_static/avogadro2-dark.png" class="logo__image only-dark" alt="Avogadro Documentation- Home"/>`);</script>
   
-  
-    <p class="title logo__title">Avogadro</p>
   
 </a></div>
     
@@ -436,21 +435,21 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../whats-new-in-avogadro-2/index.html">What’s New in Avogadro 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../menus/index.html">Menus</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Building Molecules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="drawing-molecules.html">Drawing Molecules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="importing-molecules-by-name.html">Importing Molecules by Name</a></li>
 <li class="toctree-l2"><a class="reference internal" href="importing-from-the-pdb.html">Importing from the Protein Data Bank (PDB)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="insert-fragments.html">Insert Molecular Fragments</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Building with SMILES</a></li>
 <li class="toctree-l2"><a class="reference internal" href="building-dna-rna.html">Building DNA or RNA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="building-peptides.html">Building Peptides</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../building-materials/index.html">Building Materials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../optimizing-geometry/index.html">Optimizing Geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../display-types/index.html">Display Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extensions/index.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimizing-geometry/index.html">Optimizing Geometry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings/index.html">Settings</a></li>
 </ul>
 </div>
 </nav></div>
@@ -512,14 +511,23 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="building-with-smiles">
-<h1>Building with SMILES<a class="headerlink" href="#building-with-smiles" title="Link to this heading">#</a></h1>
-<p>SMILES (Simplified molecular-input line-entry system) allows you to build molecules through a string of text. If you have a SMILES string (e.g., copied from a paper or website) or prefer to enter one for a complicated molecule, Avogadro will build a 3D geometry from the SMILES.</p>
+<span id="building-molecules-smiles"></span><h1>Building with SMILES<a class="headerlink" href="#building-with-smiles" title="Link to this heading">#</a></h1>
+<p>SMILES (<a class="reference external" href="https://en.wikipedia.org/wiki/Simplified_Molecular_Input_Line_Entry_System">Simplified Molecular-Input Line-Entry System</a>) allows you to build molecules through a string of text. If you have a SMILES string (e.g., copied from a paper or website) or prefer to enter one for a complicated molecule, Avogadro will build a 3D geometry from the SMILES using <a class="reference external" href="https://openbabel.org/">Open Babel</a></p>
+<p>SMILES is also a useful way to copy a molecule from a 2D chemical drawing program to insert into Avogadro.</p>
 <p>Under the “Build” menu, hold your cursor over “Insert”, and select “SMILES…”.</p>
-<p><img alt="" src="../../_images/4dd015d9-d489-42d5-a8b1-be5e6080bbd0.png" /></p>
+<p><img alt="" src="../../_images/build-smiles.png" /></p>
 <p>Enter your SMILES fragment, and select “OK”.</p>
-<p><img alt="" src="../../_images/6d7b8ae1-2daf-4d0a-874a-3979e52c0dfd.png" /></p>
+<p><img alt="" src="../../_images/insert-smiles.png" /></p>
 <p>There it is…</p>
-<p><img alt="" src="../../_images/791f7d8e-bf76-4b5f-b163-1ed2860ecad6.png" /></p>
+<p><img alt="" src="../../_images/caffeine-window.png" /></p>
+<section id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="importing-molecules-by-name.html#building-molecules-byname"><span class="std std-ref">Importing Molecules by Name</span></a> – Import molecules by chemical name from online databases</p></li>
+<li><p><a class="reference internal" href="insert-fragments.html#building-molecules-fragments"><span class="std std-ref">Insert Molecular Fragments</span></a> – Insert common molecular fragments from the built-in library</p></li>
+<li><p><a class="reference internal" href="../tools/template-tool.html#tools-template-tool"><span class="std std-ref">Template Tool</span></a> – Attach functional groups to existing molecules</p></li>
+</ul>
+</section>
 </section>
 
 
@@ -561,6 +569,18 @@ document.write(`
 
 
   <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#see-also">See Also</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
 
   
   <div class="tocsection editthispage">
@@ -598,7 +618,7 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item">          <p>
-            ©2025 The OpenChemistry / Avogadro Teams 
+            ©2026 The OpenChemistry / Avogadro Teams 
           </p>
           <p>Covered by the <a href="https://github.com/openchemistry/avogadrolibs/blob/master/CODE_OF_CONDUCT.md">Avogadro Code of Conduct</a>.
           </p></div>

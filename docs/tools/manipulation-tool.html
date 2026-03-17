@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Manipulation Tool &#8212; Avogadro 1.100.0 documentation</title>
+    <title>Manipulation Tool &#8212; Avogadro 1.103.0 documentation</title>
   
   
   
@@ -33,13 +33,14 @@
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ee427ece" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mermaid-theme.css?v=7f85688a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=d87f2dab"></script>
+    <script src="../../_static/documentation_options.js?v=4a00f340"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -136,11 +137,9 @@
       
     
     
-    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt=""/>
-    <script>document.write(`<img src="../../_static/avogadro2.png" class="logo__image only-dark" alt=""/>`);</script>
+    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt="Avogadro Documentation- Home"/>
+    <script>document.write(`<img src="../../_static/avogadro2-dark.png" class="logo__image only-dark" alt="Avogadro Documentation- Home"/>`);</script>
   
-  
-    <p class="title logo__title">Avogadro</p>
   
 </a></div>
     
@@ -436,26 +435,26 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../whats-new-in-avogadro-2/index.html">What’s New in Avogadro 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building-molecules/index.html">Building Molecules</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Tools</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="navigation-tool.html">Navigation Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="draw-tool.html">Draw Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="template-tool.html">Template Tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="label-tool.html">Label Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="selection-tool.html">Selection Tool</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Manipulation Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bond-centric-manipulation-tool.html">Bond-Centric Manipulation Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoopt-tool.html">AutoOptimization Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="measure-tool.html">Measure Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="animation-tool.html">Animation Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="align-tool.html">Align Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="label-tool.html">Label Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard-shortcuts.html">Keyboard Shortcuts</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../menus/index.html">Menus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../building-molecules/index.html">Building Molecules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../building-materials/index.html">Building Materials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../optimizing-geometry/index.html">Optimizing Geometry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../display-types/index.html">Display Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extensions/index.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimizing-geometry/index.html">Optimizing Geometry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings/index.html">Settings</a></li>
 </ul>
 </div>
 </nav></div>
@@ -519,10 +518,10 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="manipulation-tool">
 <span id="tools-manipulation-tool"></span><h1>Manipulation Tool<a class="headerlink" href="#manipulation-tool" title="Link to this heading">#</a></h1>
 <p><img alt="The icon of the Manipulation Tool in light mode." src="../../_images/icon_manipulate.svg" /></p>
-<p>Keyboard shortcut: <kbd>Ctrl</kbd>+<kbd>6</kbd></p>
+<p>Keyboard shortcut: <kbd>Ctrl</kbd>+<kbd>5</kbd></p>
 <p>The <strong>Manipulation Tool</strong> allows you to <strong>move</strong> atoms, molecules, and fragments.</p>
 <section id="basic-usage">
-<h2>Basic usage<a class="headerlink" href="#basic-usage" title="Link to this heading">#</a></h2>
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading">#</a></h2>
 <p><strong>Click and drag</strong> an atom to <strong>manipulate</strong> it.</p>
 <p>The Manipulation Tool operates in two different modes:</p>
 <ol class="arabic simple">
@@ -541,23 +540,23 @@ On a single atom this will have no visible effect.</p>
 <p class="admonition-title">Tip</p>
 <p>Rotation with click and drag will always be about the geometric center of the selection.</p>
 </div>
-<p>The Manipulation Tool is automatically selected after <a class="reference internal" href="../menus/build-menu.html#menus-build-menu-insert"><span class="std std-ref">inserting a fragment</span></a> via <code class="docutils literal notranslate"><span class="pre">Build</span></code>⇒<code class="docutils literal notranslate"><span class="pre">Insert</span></code>, to enable quick and easy positioning of the new fragment.</p>
+<p>The Manipulation Tool is automatically selected after <a class="reference internal" href="../menus/build-menu.html#menus-build-menu-insert"><span class="std std-ref">inserting a fragment</span></a> via <strong>Build ⇒ Insert</strong>, to enable quick and easy positioning of the new fragment.</p>
 </section>
-<section id="pane-options">
-<h2>Pane options<a class="headerlink" href="#pane-options" title="Link to this heading">#</a></h2>
+<section id="options">
+<h2>Options<a class="headerlink" href="#options" title="Link to this heading">#</a></h2>
 <p>The options in the Manipulate Pane allow you to apply transformations mathematically to the currently selected atoms.</p>
 <dl class="simple myst">
 <dt>Translate by:</dt><dd><p>Specify the distances, in angstrom, to shift the selection along the X-, Y-, and Z-axes.</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="../../_images/0f89679e-9bee-4005-8793-fc96682ecd34.png"><img alt="Applying a mathematical translation." class="align-center" src="../../_images/0f89679e-9bee-4005-8793-fc96682ecd34.png" style="height: 300px;" /></a></p>
+<p><a class="reference internal" href="../../_images/manipulate-translate.png"><img alt="Applying a mathematical translation." class="align-center" src="../../_images/manipulate-translate.png" style="height: 300px;" /></a></p>
 <dl class="simple myst">
 <dt>Rotate around:</dt><dd><p>Specify the angles, in degrees, to rotate the selection around the X-, Y-, and Z-axes, as well as the centre of the rotation.</p>
 <p>The rotation can be carried out around the center of the current geometry or the origin, selected from the drop-down menu.
 The X-, Y-, and Z-axes used for the rotation will be considered to intersect at this point.</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="../../_images/14c1bee4-7288-4fa7-8660-d9fc58578631.png"><img alt="Applying a mathematical rotation." class="align-center" src="../../_images/14c1bee4-7288-4fa7-8660-d9fc58578631.png" style="height: 300px;" /></a></p>
+<p><a class="reference internal" href="../../_images/manipulate-rotate.png"><img alt="Applying a mathematical rotation." class="align-center" src="../../_images/manipulate-rotate.png" style="height: 300px;" /></a></p>
 <dl class="simple myst">
 <dt>Apply</dt><dd><p>Apply the specified transformations to the current selection.</p>
 <p>If values for both translation and rotation have been entered, both will be applied.</p>
@@ -566,11 +565,18 @@ The X-, Y-, and Z-axes used for the rotation will be considered to intersect at 
 <p>This does not reset the molecule or reverse any transformations; if you want to undo your adjustments, go to the <code class="docutils literal notranslate"><span class="pre">Edit</span></code> menu in the top bar and select <code class="docutils literal notranslate"><span class="pre">Undo</span> <span class="pre">Manipulate</span> <span class="pre">Atom</span></code>.</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="../../_images/e711ffa1-6a52-4748-af42-e734581bf36b.png"><img alt="Undoing transformations." class="align-center" src="../../_images/e711ffa1-6a52-4748-af42-e734581bf36b.png" style="height: 600px;" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The icon for the Manipulation Tool is adapted from a design by <a class="reference external" href="https://thenounproject.com/ryandeel/">Ryan Dell</a>, a contributor to the Noun Project.</p>
 </div>
+</section>
+<section id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="selection-tool.html#tools-selection-tool"><span class="std std-ref">Selection Tool</span></a> – Select atoms before manipulating them</p></li>
+<li><p><a class="reference internal" href="navigation-tool.html#tools-navigation-tool"><span class="std std-ref">Navigation Tool</span></a> – Rotate and pan the view (not the atoms)</p></li>
+<li><p><a class="reference internal" href="bond-centric-manipulation-tool.html#tools-bond-centric-manipulation-tool"><span class="std std-ref">Bond-Centric Manipulation Tool</span></a> – Adjust bond lengths and angles while preserving geometry</p></li>
+</ul>
 </section>
 </section>
 
@@ -620,8 +626,9 @@ The X-, Y-, and Z-axes used for the rotation will be considered to intersect at 
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage">Basic usage</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pane-options">Pane options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage">Basic Usage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#options">Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#see-also">See Also</a></li>
 </ul>
   </nav></div>
 
@@ -663,7 +670,7 @@ The X-, Y-, and Z-axes used for the rotation will be considered to intersect at 
     <div class="footer-items__start">
       
         <div class="footer-item">          <p>
-            ©2025 The OpenChemistry / Avogadro Teams 
+            ©2026 The OpenChemistry / Avogadro Teams 
           </p>
           <p>Covered by the <a href="https://github.com/openchemistry/avogadrolibs/blob/master/CODE_OF_CONDUCT.md">Avogadro Code of Conduct</a>.
           </p></div>

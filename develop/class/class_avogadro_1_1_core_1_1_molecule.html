@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Avogadro::Core::Molecule &#8212; Avogadro 1.100.0 documentation</title>
+    <title>Avogadro::Core::Molecule &#8212; Avogadro 1.103.0 documentation</title>
   
   
   
@@ -33,13 +33,14 @@
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ee427ece" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mermaid-theme.css?v=7f85688a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=d87f2dab"></script>
+    <script src="../../_static/documentation_options.js?v=4a00f340"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -136,11 +137,9 @@
       
     
     
-    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt=""/>
-    <script>document.write(`<img src="../../_static/avogadro2.png" class="logo__image only-dark" alt=""/>`);</script>
+    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt="Avogadro Documentation- Home"/>
+    <script>document.write(`<img src="../../_static/avogadro2-dark.png" class="logo__image only-dark" alt="Avogadro Documentation- Home"/>`);</script>
   
-  
-    <p class="title logo__title">Avogadro</p>
   
 </a></div>
     
@@ -434,13 +433,11 @@ document.write(`
   <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Develop</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../structure.html">Project Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../build.html">Building Source Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../scripts/index.html">Script Plugins</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rpc.html">Avogadro Remote Procedure Call (RPC)</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../classlist.html">API Documentation</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../structure.html">Project Structure and C++ API</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../avogadroapp.html">Avogadro App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calc.html">Avogadro::Calc</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../core.html">Avogadro::Core</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_angle_iterator.html">Avogadro::Core::AngleIterator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html">Avogadro::Core::Array</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_array_set.html">Avogadro::Core::ArraySet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_array_set_1_1_holder.html">Avogadro::Core::ArraySet::Holder</a></li>
@@ -448,28 +445,35 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_atom.html">Avogadro::Core::Atom</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_atom_template.html">Avogadro::Core::AtomTemplate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_atom_typer.html">Avogadro::Core::AtomTyper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_atom_utilities.html">Avogadro::Core::AtomUtilities</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_avo_spglib.html">Avogadro::Core::AvoSpglib</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_basis_set.html">Avogadro::Core::BasisSet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_bond.html">Avogadro::Core::Bond</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_bond_template.html">Avogadro::Core::BondTemplate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_color3f.html">Avogadro::Core::Color3f</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_constraint.html">Avogadro::Core::Constraint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_coordinate_block_generator.html">Avogadro::Core::CoordinateBlockGenerator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_coordinate_set.html">Avogadro::Core::CoordinateSet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_crystal_tools.html">Avogadro::Core::CrystalTools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_cube.html">Avogadro::Core::Cube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_dihedral_iterator.html">Avogadro::Core::DihedralIterator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_elements.html">Avogadro::Core::Elements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_gaussian_set.html">Avogadro::Core::GaussianSet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_gaussian_set_tools.html">Avogadro::Core::GaussianSetTools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_graph.html">Avogadro::Core::Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_layer.html">Avogadro::Core::Layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_layer_manager.html">Avogadro::Core::LayerManager</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_mesh.html">Avogadro::Core::Mesh</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Avogadro::Core::Molecule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_molecule_deserializer.html">Avogadro::Core::MoleculeDeserializer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_molecule_serializer.html">Avogadro::Core::MoleculeSerializer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_mutex.html">Avogadro::Core::Mutex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_name_atom_typer.html">Avogadro::Core::NameAtomTyper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_neighbor_perceiver.html">Avogadro::Core::NeighborPerceiver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_residue.html">Avogadro::Core::Residue</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_residue_data.html">Avogadro::Core::ResidueData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_ring_perceiver.html">Avogadro::Core::RingPerceiver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_secondary_structure_assigner.html">Avogadro::Core::SecondaryStructureAssigner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_shared_mutex.html">Avogadro::Core::SharedMutex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_slater_set.html">Avogadro::Core::SlaterSet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_avogadro_1_1_core_1_1_slater_set_tools.html">Avogadro::Core::SlaterSetTools</a></li>
@@ -495,9 +499,13 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../qtgui.html">Avogadro::QtGui</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../qtplugins.html">Avogadro::QtPlugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../rendering.html">Avogadro::Rendering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vtk.html">Avogadro::VTK</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../build.html">Building Source Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scripts/index.html">Script Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rpc.html">Avogadro Remote Procedure Call (RPC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/code.html">Contributing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/ai-usage.html">AI Usage Policy</a></li>
 </ul>
 </div>
 </nav></div>
@@ -760,6 +768,109 @@ document.write(`
 
 </div>
 <div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-constraints">Constraints</p>
+<p>Methods for distance, angle, torsion, etc. constraints </p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule13addConstraintE4Real5Index5Index5Index5Index">
+<span id="_CPPv3N8Avogadro4Core8Molecule13addConstraintE4Real5Index5Index5Index5Index"></span><span id="_CPPv2N8Avogadro4Core8Molecule13addConstraintE4Real5Index5Index5Index5Index"></span><span id="Avogadro::Core::Molecule::addConstraint__Real.Index.Index.Index.Index"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a6b03aefb1a9adcf5df5f5e51c57dc213"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addConstraint</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Real</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Value</span></span>, <span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span>, <span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span>, <span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">c</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">MaxIndex</span></span>, <span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">d</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">MaxIndex</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule13addConstraintE4Real5Index5Index5Index5Index" title="Link to this definition">#</a><br /></dt>
+<dd><p>Freeze or unfreeze an atom for optimization </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule13addConstraintER10Constraint">
+<span id="_CPPv3N8Avogadro4Core8Molecule13addConstraintER10Constraint"></span><span id="_CPPv2N8Avogadro4Core8Molecule13addConstraintER10Constraint"></span><span id="Avogadro::Core::Molecule::addConstraint__ConstraintR"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a242e0a049be20ce927ee2891c6fcc74d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addConstraint</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="class_avogadro_1_1_core_1_1_constraint.html#_CPPv4N8Avogadro4Core10ConstraintE" title="Avogadro::Core::Constraint"><span class="n"><span class="pre">Constraint</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">c</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule13addConstraintER10Constraint" title="Link to this definition">#</a><br /></dt>
+<dd><p>Freeze or unfreeze an atom for optimization </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule16removeConstraintE5Index5Index5Index5Index">
+<span id="_CPPv3N8Avogadro4Core8Molecule16removeConstraintE5Index5Index5Index5Index"></span><span id="_CPPv2N8Avogadro4Core8Molecule16removeConstraintE5Index5Index5Index5Index"></span><span id="Avogadro::Core::Molecule::removeConstraint__Index.Index.Index.Index"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a694db4f61131352f68f33578a3978731"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">removeConstraint</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span>, <span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span>, <span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">c</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">MaxIndex</span></span>, <span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">d</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">MaxIndex</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule16removeConstraintE5Index5Index5Index5Index" title="Link to this definition">#</a><br /></dt>
+<dd><p>Freeze or unfreeze an atom for optimization </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule16clearConstraintsEv">
+<span id="_CPPv3N8Avogadro4Core8Molecule16clearConstraintsEv"></span><span id="_CPPv2N8Avogadro4Core8Molecule16clearConstraintsEv"></span><span id="Avogadro::Core::Molecule::clearConstraints"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1aabc1f5cb97f40b9136f77d6f26d0719a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearConstraints</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule16clearConstraintsEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Freeze or unfreeze an atom for optimization </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule14setConstraintsERKNSt6vectorIN4Core10ConstraintEEE">
+<span id="_CPPv3N8Avogadro4Core8Molecule14setConstraintsERKNSt6vectorIN4Core10ConstraintEEE"></span><span id="_CPPv2N8Avogadro4Core8Molecule14setConstraintsERKNSt6vectorIN4Core10ConstraintEEE"></span><span id="Avogadro::Core::Molecule::setConstraints__std::vector:Core::Constraint:CR"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a73d6645a75c7af58ba5343f0899f3a0b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setConstraints</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Core</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_constraint.html#_CPPv4N8Avogadro4Core10ConstraintE" title="Avogadro::Core::Constraint"><span class="n"><span class="pre">Constraint</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">constraints</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule14setConstraintsERKNSt6vectorIN4Core10ConstraintEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Freeze or unfreeze an atom for optimization </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule11constraintsEv">
+<span id="_CPPv3N8Avogadro4Core8Molecule11constraintsEv"></span><span id="_CPPv2N8Avogadro4Core8Molecule11constraintsEv"></span><span id="Avogadro::Core::Molecule::constraints"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a119f03600327ebab47fdfa90d524d605"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Core</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_constraint.html#_CPPv4N8Avogadro4Core10ConstraintE" title="Avogadro::Core::Constraint"><span class="n"><span class="pre">Constraint</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">constraints</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule11constraintsEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Freeze or unfreeze an atom for optimization </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule11constraintsEv">
+<span id="_CPPv3NK8Avogadro4Core8Molecule11constraintsEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule11constraintsEv"></span><span id="Avogadro::Core::Molecule::constraintsC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1abbb45cadcb3af199332dd4a060b30353"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Core</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_constraint.html#_CPPv4N8Avogadro4Core10ConstraintE" title="Avogadro::Core::Constraint"><span class="n"><span class="pre">Constraint</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">constraints</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule11constraintsEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Freeze or unfreeze an atom for optimization </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule13setFrozenAtomE5Indexb">
+<span id="_CPPv3N8Avogadro4Core8Molecule13setFrozenAtomE5Indexb"></span><span id="_CPPv2N8Avogadro4Core8Molecule13setFrozenAtomE5Indexb"></span><span id="Avogadro::Core::Molecule::setFrozenAtom__Index.b"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1aaa1b0f89d4f8355de337f06557365c9a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFrozenAtom</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atomId</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">frozen</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule13setFrozenAtomE5Indexb" title="Link to this definition">#</a><br /></dt>
+<dd><p>Freeze or unfreeze an atom for optimization </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule10frozenAtomE5Index">
+<span id="_CPPv3NK8Avogadro4Core8Molecule10frozenAtomE5Index"></span><span id="_CPPv2NK8Avogadro4Core8Molecule10frozenAtomE5Index"></span><span id="Avogadro::Core::Molecule::frozenAtom__IndexC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1ae440e5ee9fe2bcc20eed1db56dce6cb8"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">frozenAtom</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atomId</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule10frozenAtomE5Index" title="Link to this definition">#</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>whether the specified atom is frozen </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule14frozenAtomAxisE5Indexi">
+<span id="_CPPv3NK8Avogadro4Core8Molecule14frozenAtomAxisE5Indexi"></span><span id="_CPPv2NK8Avogadro4Core8Molecule14frozenAtomAxisE5Indexi"></span><span id="Avogadro::Core::Molecule::frozenAtomAxis__Index.iC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a762276eaf74cd3c6292d35f22ad5fa55"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">frozenAtomAxis</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atomId</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">axis</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule14frozenAtomAxisE5Indexi" title="Link to this definition">#</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atomId</strong> – The index of the atom to check </p></li>
+<li><p><strong>axis</strong> – The axis to check (0 = x, 1 = y, 2 = z) </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>whether the specified axis of the specified atom is frozen </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule17setFrozenAtomAxisE5Indexib">
+<span id="_CPPv3N8Avogadro4Core8Molecule17setFrozenAtomAxisE5Indexib"></span><span id="_CPPv2N8Avogadro4Core8Molecule17setFrozenAtomAxisE5Indexib"></span><span id="Avogadro::Core::Molecule::setFrozenAtomAxis__Index.i.b"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a9cadbcfc1e75741d917aed1c7a4bcc2a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFrozenAtomAxis</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atomId</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">axis</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">frozen</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule17setFrozenAtomAxisE5Indexib" title="Link to this definition">#</a><br /></dt>
+<dd><p>Freeze or unfreeze X, Y, or Z coordinate of an atom for optimization </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atomId</strong> – The index of the atom to modify. </p></li>
+<li><p><strong>axis</strong> – The axis to freeze (0, 1, or 2 for X, Y, or Z) </p></li>
+<li><p><strong>frozen</strong> – True to freeze, false to unfreeze </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule14frozenAtomMaskEv">
+<span id="_CPPv3NK8Avogadro4Core8Molecule14frozenAtomMaskEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule14frozenAtomMaskEv"></span><span id="Avogadro::Core::Molecule::frozenAtomMaskC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a7e53b9e11cfc4b497d91dad56062fb58"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">VectorXd</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">frozenAtomMask</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule14frozenAtomMaskEv" title="Link to this definition">#</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the frozen status of atoms (i.e., 3*N array of 1.0 or 0.0) 0.0 means the atom is frozen, 1.0 means the atom is not frozen. (i.e., multiply this mask with gradients to freeze atoms) </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule8AtomTypeE">
@@ -1008,28 +1119,6 @@ document.write(`
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule11totalChargeEv">
-<span id="_CPPv3NK8Avogadro4Core8Molecule11totalChargeEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule11totalChargeEv"></span><span id="Avogadro::Core::Molecule::totalChargeC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a939922dbd85008fcb8cb3cc4320b2b57"></span><span class="kt"><span class="pre">signed</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">totalCharge</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule11totalChargeEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the total charge on the molecule. The method will first check to see if a total charge has been set. If not, it will calculate the total charge from the formal charges (if set). If neither has been set, it will assume the total charge is zero. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The total charge of the molecule. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule21totalSpinMultiplicityEv">
-<span id="_CPPv3NK8Avogadro4Core8Molecule21totalSpinMultiplicityEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule21totalSpinMultiplicityEv"></span><span id="Avogadro::Core::Molecule::totalSpinMultiplicityC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a1243860daf56f9717b6444a56b161430"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">totalSpinMultiplicity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule21totalSpinMultiplicityEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the total spin multiplicity of the molecule. The method will first check to see if a total spin has been set. If not, it will either suggest a singlet if an even number of electrons are present, or a doublet if an odd number of electrons are present. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The total spin multiplicity of the molecule. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule12formalChargeE5Index">
 <span id="_CPPv3NK8Avogadro4Core8Molecule12formalChargeE5Index"></span><span id="_CPPv2NK8Avogadro4Core8Molecule12formalChargeE5Index"></span><span id="Avogadro::Core::Molecule::formalCharge__IndexC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a57903d4b6f7a76f0bb79a8978c90b8eb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">signed</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">formalCharge</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atomId</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule12formalChargeE5Index" title="Link to this definition">#</a><br /></dt>
 <dd><p>Get the formal charge for the requested atom. </p>
@@ -1066,6 +1155,89 @@ document.write(`
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>atomId</strong> – The index of the atom to modify. </p></li>
 <li><p><strong>charge</strong> – The new formal charge. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True on success, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule11totalChargeEv">
+<span id="_CPPv3NK8Avogadro4Core8Molecule11totalChargeEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule11totalChargeEv"></span><span id="Avogadro::Core::Molecule::totalChargeC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a939922dbd85008fcb8cb3cc4320b2b57"></span><span class="kt"><span class="pre">signed</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">totalCharge</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule11totalChargeEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the total charge on the molecule. The method will first check to see if a total charge has been set. If not, it will calculate the total charge from the formal charges (if set). If neither has been set, it will assume the total charge is zero. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The total charge of the molecule. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule21totalSpinMultiplicityEv">
+<span id="_CPPv3NK8Avogadro4Core8Molecule21totalSpinMultiplicityEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule21totalSpinMultiplicityEv"></span><span id="Avogadro::Core::Molecule::totalSpinMultiplicityC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a1243860daf56f9717b6444a56b161430"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">totalSpinMultiplicity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule21totalSpinMultiplicityEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the total spin multiplicity of the molecule. The method will first check to see if a total spin has been set. If not, it will either suggest a singlet if an even number of electrons are present, or a doublet if an odd number of electrons are present. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The total spin multiplicity of the molecule. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule8isotopesEv">
+<span id="_CPPv3N8Avogadro4Core8Molecule8isotopesEv"></span><span id="_CPPv2N8Avogadro4Core8Molecule8isotopesEv"></span><span id="Avogadro::Core::Molecule::isotopes"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a8df5325aac784d3caa14d87a76d7c437"></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">short</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">isotopes</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule8isotopesEv" title="Link to this definition">#</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>an array of the isotopes for the atoms in the molecule. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule8isotopesEv">
+<span id="_CPPv3NK8Avogadro4Core8Molecule8isotopesEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule8isotopesEv"></span><span id="Avogadro::Core::Molecule::isotopesC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1aeb4820184f0444db00e145654e29df03"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">short</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">isotopes</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule8isotopesEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule7isotopeE5Index">
+<span id="_CPPv3NK8Avogadro4Core8Molecule7isotopeE5Index"></span><span id="_CPPv2NK8Avogadro4Core8Molecule7isotopeE5Index"></span><span id="Avogadro::Core::Molecule::isotope__IndexC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a02088eb0dc8f72ac019c809d554f7c7c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isotope</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atomId</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule7isotopeE5Index" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the isotope for the requested atom. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>atomId</strong> – The index of the atom. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The isotope of the atom indexed at <em>atomId</em>, or 0 if <em>atomId</em> is invalid. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule11setIsotopesERKN4Core5ArrayItEE">
+<span id="_CPPv3N8Avogadro4Core8Molecule11setIsotopesERKN4Core5ArrayItEE"></span><span id="_CPPv2N8Avogadro4Core8Molecule11setIsotopesERKN4Core5ArrayItEE"></span><span id="Avogadro::Core::Molecule::setIsotopes__Core::Array:unsigned-short:CR"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a5a1192360ef1544e096f8701286738f6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setIsotopes</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Core</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">short</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">isotopes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule11setIsotopesERKN4Core5ArrayItEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Replace the current array of isotopes. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>charges</strong> – The new isotope array. Must be of length <a class="reference internal" href="#class_avogadro_1_1_core_1_1_molecule_1a7ab455d3fe2cb865b08606f19877c3bd"><span class="std std-ref">atomCount()</span></a>. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True on success, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule10setIsotopeE5Indext">
+<span id="_CPPv3N8Avogadro4Core8Molecule10setIsotopeE5Indext"></span><span id="_CPPv2N8Avogadro4Core8Molecule10setIsotopeE5Indext"></span><span id="Avogadro::Core::Molecule::setIsotope__Index.unsigned-short"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a71ba2a20d69dec7f5d877b9c34a8a12e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setIsotope</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atomId</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">isotope</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule10setIsotopeE5Indext" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set the isotope of a single atom. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atomId</strong> – The index of the atom to modify. </p></li>
+<li><p><strong>isotope</strong> – The new isotope (or zero for most common) </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1505,10 +1677,10 @@ document.write(`
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule13setBondLabelsERKN4Core5ArrayINSt6stringEEE">
 <span id="_CPPv3N8Avogadro4Core8Molecule13setBondLabelsERKN4Core5ArrayINSt6stringEEE"></span><span id="_CPPv2N8Avogadro4Core8Molecule13setBondLabelsERKN4Core5ArrayINSt6stringEEE"></span><span id="Avogadro::Core::Molecule::setBondLabels__Core::Array:ss:CR"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1ad178c09428431a8aa031c5013c70b94a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBondLabels</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Core</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">label</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule13setBondLabelsERKN4Core5ArrayINSt6stringEEE" title="Link to this definition">#</a><br /></dt>
-<dd><p>Set all the atom labels in the molecule. </p>
+<dd><p>Set all the bond labels in the molecule. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>label</strong> – The new label array. Must be of length <a class="reference internal" href="#class_avogadro_1_1_core_1_1_molecule_1a7ab455d3fe2cb865b08606f19877c3bd"><span class="std std-ref">atomCount()</span></a>. </p>
+<dd class="field-odd"><p><strong>label</strong> – The new label array. Must be of length <a class="reference internal" href="#class_avogadro_1_1_core_1_1_molecule_1a5d163b3a19101bba63c870ab48edfba9"><span class="std std-ref">bondCount()</span></a>. </p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True on success, false otherwise. </p>
@@ -1579,6 +1751,47 @@ document.write(`
 <dd></dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule18setActiveCubeIndexE5Index">
+<span id="_CPPv3N8Avogadro4Core8Molecule18setActiveCubeIndexE5Index"></span><span id="_CPPv2N8Avogadro4Core8Molecule18setActiveCubeIndexE5Index"></span><span id="Avogadro::Core::Molecule::setActiveCubeIndex__Index"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a71a9db55811dd95eb437757743e7cf0d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setActiveCubeIndex</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule18setActiveCubeIndexE5Index" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set the active cube index for volume rendering. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> – The index of the cube to make active. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the index is valid and was set, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule15activeCubeIndexEv">
+<span id="_CPPv3NK8Avogadro4Core8Molecule15activeCubeIndexEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule15activeCubeIndexEv"></span><span id="Avogadro::Core::Molecule::activeCubeIndexC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a61830815eebc1d034cb85817fd83d0b0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">activeCubeIndex</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule15activeCubeIndexEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the index of the active cube. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The active cube index, or 0 if no cubes exist. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule10activeCubeEv">
+<span id="_CPPv3N8Avogadro4Core8Molecule10activeCubeEv"></span><span id="_CPPv2N8Avogadro4Core8Molecule10activeCubeEv"></span><span id="Avogadro::Core::Molecule::activeCube"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a0e6b0ec776393ef811c8257cd5667cdd"></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_cube.html#_CPPv4N8Avogadro4Core4CubeE" title="Avogadro::Core::Cube"><span class="n"><span class="pre">Cube</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">activeCube</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule10activeCubeEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the active cube for volume rendering. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A pointer to the active cube, or nullptr if no cubes exist. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule10activeCubeEv">
+<span id="_CPPv3NK8Avogadro4Core8Molecule10activeCubeEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule10activeCubeEv"></span><span id="Avogadro::Core::Molecule::activeCubeC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a18008c4145fcc7a64f259c9b570fc109"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="class_avogadro_1_1_core_1_1_cube.html#_CPPv4N8Avogadro4Core4CubeE" title="Avogadro::Core::Cube"><span class="n"><span class="pre">Cube</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">activeCube</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule10activeCubeEv" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule5cubesEv">
 <span id="_CPPv3N8Avogadro4Core8Molecule5cubesEv"></span><span id="_CPPv2N8Avogadro4Core8Molecule5cubesEv"></span><span id="Avogadro::Core::Molecule::cubes"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1ad7fb3f5b1168c6b0a4ab26047b573714"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_cube.html#_CPPv4N8Avogadro4Core4CubeE" title="Avogadro::Core::Cube"><span class="n"><span class="pre">Cube</span></span></a><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cubes</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule5cubesEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Get the cubes vector set (if present) for the molecule. </p>
@@ -1616,6 +1829,16 @@ document.write(`
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The mass of the molecule obtained by summing constituent atomic masses. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule16monoisotopicMassEv">
+<span id="_CPPv3NK8Avogadro4Core8Molecule16monoisotopicMassEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule16monoisotopicMassEv"></span><span id="Avogadro::Core::Molecule::monoisotopicMassC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a72a9c05f2d6eaf250018d9cf88eb9b25"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">monoisotopicMass</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule16monoisotopicMassEv" title="Link to this definition">#</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the monoisotopic mass of the molecule obtained by summing the isotopic masses of the atoms (including the most common isotope if not specified). </p>
 </dd>
 </dl>
 </dd></dl>
@@ -1762,8 +1985,8 @@ document.write(`
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule17coordinate3dCountEv">
-<span id="_CPPv3N8Avogadro4Core8Molecule17coordinate3dCountEv"></span><span id="_CPPv2N8Avogadro4Core8Molecule17coordinate3dCountEv"></span><span id="Avogadro::Core::Molecule::coordinate3dCount"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1ab5730b6f7556cb6d43670ff32b51cad5"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">coordinate3dCount</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule17coordinate3dCountEv" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule17coordinate3dCountEv">
+<span id="_CPPv3NK8Avogadro4Core8Molecule17coordinate3dCountEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule17coordinate3dCountEv"></span><span id="Avogadro::Core::Molecule::coordinate3dCountC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a8680f21b18fb40e19afa19f072b2b13d"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">coordinate3dCount</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule17coordinate3dCountEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -1772,19 +1995,43 @@ document.write(`
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule12coordinate3dEi">
-<span id="_CPPv3NK8Avogadro4Core8Molecule12coordinate3dEi"></span><span id="_CPPv2NK8Avogadro4Core8Molecule12coordinate3dEi"></span><span id="Avogadro::Core::Molecule::coordinate3d__iC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a90e30eb5fbcc2b458fb8c77accfbf302"></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Vector3</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">coordinate3d</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule12coordinate3dEi" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule12coordinate3dE6size_t">
+<span id="_CPPv3NK8Avogadro4Core8Molecule12coordinate3dE6size_t"></span><span id="_CPPv2NK8Avogadro4Core8Molecule12coordinate3dE6size_t"></span><span id="Avogadro::Core::Molecule::coordinate3d__sC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a46237b30ea98bbd800ceca7af7b1ac1d"></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Vector3</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">coordinate3d</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule12coordinate3dE6size_t" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule15setCoordinate3dERK5ArrayI7Vector3Ei">
-<span id="_CPPv3N8Avogadro4Core8Molecule15setCoordinate3dERK5ArrayI7Vector3Ei"></span><span id="_CPPv2N8Avogadro4Core8Molecule15setCoordinate3dERK5ArrayI7Vector3Ei"></span><span id="Avogadro::Core::Molecule::setCoordinate3d__Array:Vector3:CR.i"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a1748fec800a12e8016ed4f9ba3d1ff6a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCoordinate3d</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Vector3</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">coords</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule15setCoordinate3dERK5ArrayI7Vector3Ei" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule15setCoordinate3dERK5ArrayI7Vector3E6size_t">
+<span id="_CPPv3N8Avogadro4Core8Molecule15setCoordinate3dERK5ArrayI7Vector3E6size_t"></span><span id="_CPPv2N8Avogadro4Core8Molecule15setCoordinate3dERK5ArrayI7Vector3E6size_t"></span><span id="Avogadro::Core::Molecule::setCoordinate3d__Array:Vector3:CR.s"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1aa61919ca624e73097f8ce5c72a1840c1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCoordinate3d</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Vector3</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">coords</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule15setCoordinate3dERK5ArrayI7Vector3E6size_t" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule17clearCoordinate3dEv">
 <span id="_CPPv3N8Avogadro4Core8Molecule17clearCoordinate3dEv"></span><span id="_CPPv2N8Avogadro4Core8Molecule17clearCoordinate3dEv"></span><span id="Avogadro::Core::Molecule::clearCoordinate3d"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1ae4bcad87a065aa92f66ba810e0718098"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearCoordinate3d</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule17clearCoordinate3dEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Clear coordinate sets (except the default set) </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule18estimateVelocitiesEv">
+<span id="_CPPv3N8Avogadro4Core8Molecule18estimateVelocitiesEv"></span><span id="_CPPv2N8Avogadro4Core8Molecule18estimateVelocitiesEv"></span><span id="Avogadro::Core::Molecule::estimateVelocities"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1ab37b388b7168f13c176bcc78e2ffd75e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">estimateVelocities</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule18estimateVelocitiesEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Estimate velocities from the coordinate sets and timesteps. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule10velocitiesEi">
+<span id="_CPPv3NK8Avogadro4Core8Molecule10velocitiesEi"></span><span id="_CPPv2NK8Avogadro4Core8Molecule10velocitiesEi"></span><span id="Avogadro::Core::Molecule::velocities__iC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a7204917e5a92872851f8d98ffae9c8b4"></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Vector3</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">velocities</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule10velocitiesEi" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the velocities for the specified index. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule13setVelocitiesERK5ArrayI7Vector3Ei">
+<span id="_CPPv3N8Avogadro4Core8Molecule13setVelocitiesERK5ArrayI7Vector3Ei"></span><span id="_CPPv2N8Avogadro4Core8Molecule13setVelocitiesERK5ArrayI7Vector3Ei"></span><span id="Avogadro::Core::Molecule::setVelocities__Array:Vector3:CR.i"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a2df89a1a78bd79585914ac8b73a7c041"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVelocities</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Vector3</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">velocities</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule13setVelocitiesERK5ArrayI7Vector3Ei" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set the velocities for the specified index. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule15clearVelocitiesEv">
+<span id="_CPPv3N8Avogadro4Core8Molecule15clearVelocitiesEv"></span><span id="_CPPv2N8Avogadro4Core8Molecule15clearVelocitiesEv"></span><span id="Avogadro::Core::Molecule::clearVelocities"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a7beb5c79204ac043f4c5ad9455a73b36"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearVelocities</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule15clearVelocitiesEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Clear all velocity sets. </p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -1875,6 +2122,11 @@ document.write(`
 <dd></dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule7residueE5Index">
+<span id="_CPPv3NK8Avogadro4Core8Molecule7residueE5Index"></span><span id="_CPPv2NK8Avogadro4Core8Molecule7residueE5Index"></span><span id="Avogadro::Core::Molecule::residue__IndexC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1afc62b0dea92101af3d922dc2f04bc34e"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="class_avogadro_1_1_core_1_1_residue.html#_CPPv4N8Avogadro4Core7ResidueE" title="Avogadro::Core::Residue"><span class="n"><span class="pre">Residue</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">residue</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule7residueE5Index" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule8residuesEv">
 <span id="_CPPv3N8Avogadro4Core8Molecule8residuesEv"></span><span id="_CPPv2N8Avogadro4Core8Molecule8residuesEv"></span><span id="Avogadro::Core::Molecule::residues"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1af5d9d771de423e3e718277e1ed4bf18a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_residue.html#_CPPv4N8Avogadro4Core7ResidueE" title="Avogadro::Core::Residue"><span class="n"><span class="pre">Residue</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">residues</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule8residuesEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
@@ -1890,6 +2142,55 @@ document.write(`
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The number of residues in the molecule. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule12residueLabelE5Index">
+<span id="_CPPv3NK8Avogadro4Core8Molecule12residueLabelE5Index"></span><span id="_CPPv2NK8Avogadro4Core8Molecule12residueLabelE5Index"></span><span id="Avogadro::Core::Molecule::residueLabel__IndexC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a131e071907a056b37846d44b89a8cf3a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">residueLabel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">residueIndex</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule12residueLabelE5Index" title="Link to this definition">#</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>residueIndex</strong> – The index of the residue. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Any custom label for the requested residue. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule15setResidueLabelE5IndexRKNSt6stringE">
+<span id="_CPPv3N8Avogadro4Core8Molecule15setResidueLabelE5IndexRKNSt6stringE"></span><span id="_CPPv2N8Avogadro4Core8Molecule15setResidueLabelE5IndexRKNSt6stringE"></span><span id="Avogadro::Core::Molecule::setResidueLabel__Index.ssCR"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a7f1d0a6e15b925f0c55be72e53fbaedd"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setResidueLabel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">residueIndex</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">label</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule15setResidueLabelE5IndexRKNSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set the custom label of a single residue. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>residueIndex</strong> – The index of the residue to modify. </p></li>
+<li><p><strong>label</strong> – The new label of the residue. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True on success, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule13residueLabelsEv">
+<span id="_CPPv3NK8Avogadro4Core8Molecule13residueLabelsEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule13residueLabelsEv"></span><span id="Avogadro::Core::Molecule::residueLabelsC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1ab3b7d2f1cba673bf699433d9fd6fee52"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Core</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">residueLabels</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule13residueLabelsEv" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule16setResidueLabelsERKN4Core5ArrayINSt6stringEEE">
+<span id="_CPPv3N8Avogadro4Core8Molecule16setResidueLabelsERKN4Core5ArrayINSt6stringEEE"></span><span id="_CPPv2N8Avogadro4Core8Molecule16setResidueLabelsERKN4Core5ArrayINSt6stringEEE"></span><span id="Avogadro::Core::Molecule::setResidueLabels__Core::Array:ss:CR"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1aa122e108336df75d50983d438b859547"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setResidueLabels</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Core</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">label</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule16setResidueLabelsERKN4Core5ArrayINSt6stringEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set all the residue labels in the molecule. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>label</strong> – The new label array. Must be of length <a class="reference internal" href="#class_avogadro_1_1_core_1_1_molecule_1aae88f9c4daa0b5720058f6e2eff7d238"><span class="std std-ref">residueCount()</span></a>. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True on success, false otherwise. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -2130,38 +2431,6 @@ document.write(`
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule13setFrozenAtomE5Indexb">
-<span id="_CPPv3N8Avogadro4Core8Molecule13setFrozenAtomE5Indexb"></span><span id="_CPPv2N8Avogadro4Core8Molecule13setFrozenAtomE5Indexb"></span><span id="Avogadro::Core::Molecule::setFrozenAtom__Index.b"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1aaa1b0f89d4f8355de337f06557365c9a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFrozenAtom</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atomId</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">frozen</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule13setFrozenAtomE5Indexb" title="Link to this definition">#</a><br /></dt>
-<dd><p>Freeze or unfreeze an atom for optimization </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule10frozenAtomE5Index">
-<span id="_CPPv3NK8Avogadro4Core8Molecule10frozenAtomE5Index"></span><span id="_CPPv2NK8Avogadro4Core8Molecule10frozenAtomE5Index"></span><span id="Avogadro::Core::Molecule::frozenAtom__IndexC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1ae440e5ee9fe2bcc20eed1db56dce6cb8"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">frozenAtom</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atomId</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule10frozenAtomE5Index" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the frozen status of an atom </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule17setFrozenAtomAxisE5Indexib">
-<span id="_CPPv3N8Avogadro4Core8Molecule17setFrozenAtomAxisE5Indexib"></span><span id="_CPPv2N8Avogadro4Core8Molecule17setFrozenAtomAxisE5Indexib"></span><span id="Avogadro::Core::Molecule::setFrozenAtomAxis__Index.i.b"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a9cadbcfc1e75741d917aed1c7a4bcc2a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFrozenAtomAxis</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atomId</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">axis</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">frozen</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule17setFrozenAtomAxisE5Indexib" title="Link to this definition">#</a><br /></dt>
-<dd><p>Freeze or unfreeze X, Y, or Z coordinate of an atom for optimization </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>atomId</strong> – The index of the atom to modify. </p></li>
-<li><p><strong>axis</strong> – The axis to freeze (0, 1, or 2 for X, Y, or Z) </p></li>
-<li><p><strong>frozen</strong> – True to freeze, false to unfreeze </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule14frozenAtomMaskEv">
-<span id="_CPPv3NK8Avogadro4Core8Molecule14frozenAtomMaskEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule14frozenAtomMaskEv"></span><span id="Avogadro::Core::Molecule::frozenAtomMaskC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a7e53b9e11cfc4b497d91dad56062fb58"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">VectorXd</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">frozenAtomMask</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule14frozenAtomMaskEv" title="Link to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule11compositionEv">
 <span id="_CPPv3NK8Avogadro4Core8Molecule11compositionEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule11compositionEv"></span><span id="Avogadro::Core::Molecule::compositionC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a62c6fea6327d63d02c6b2dcdf6b644e5"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">composition</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule11compositionEv" title="Link to this definition">#</a><br /></dt>
 <dd><dl class="field-list simple">
@@ -2172,19 +2441,40 @@ document.write(`
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule18formulaCompositionEv">
+<span id="_CPPv3NK8Avogadro4Core8Molecule18formulaCompositionEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule18formulaCompositionEv"></span><span id="Avogadro::Core::Molecule::formulaCompositionC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1acee35178bd8af4181e08b28fcbe33421"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">formulaComposition</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule18formulaCompositionEv" title="Link to this definition">#</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a map of element symbols (including isotopes like D, T, 13C) to their count. Handles unit cell fractional contributions for atoms at corners (1/8), edges (1/4), and faces (1/2). </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule12getAtomBondsE5Index">
 <span id="_CPPv3NK8Avogadro4Core8Molecule12getAtomBondsE5Index"></span><span id="_CPPv2NK8Avogadro4Core8Molecule12getAtomBondsE5Index"></span><span id="Avogadro::Core::Molecule::getAtomBonds__IndexC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a19c5b092580c8f2c54f2bc3b9907e103"></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Index</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">Index</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAtomBonds</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule12getAtomBondsE5Index" title="Link to this definition">#</a><br /></dt>
-<dd></dd></dl>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the atom pairs for all bonds to the atom indexed at <em>index</em>. </p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule13getAtomOrdersE5Index">
 <span id="_CPPv3NK8Avogadro4Core8Molecule13getAtomOrdersE5Index"></span><span id="_CPPv2NK8Avogadro4Core8Molecule13getAtomOrdersE5Index"></span><span id="Avogadro::Core::Molecule::getAtomOrders__IndexC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1acf370559d0f606b3c2d1dbe0aff984c9"></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAtomOrders</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule13getAtomOrdersE5Index" title="Link to this definition">#</a><br /></dt>
-<dd></dd></dl>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the bond orders for all bonds to the atom indexed at <em>index</em>. </p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule11removeBondsE5Index">
 <span id="_CPPv3N8Avogadro4Core8Molecule11removeBondsE5Index"></span><span id="_CPPv2N8Avogadro4Core8Molecule11removeBondsE5Index"></span><span id="Avogadro::Core::Molecule::removeBonds__Index"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a62567103727f70cc875114e9610fe007"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">removeBonds</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atom</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule11removeBondsE5Index" title="Link to this definition">#</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Remove bonds to <em>atom</em></p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule8addBondsERK5ArrayINSt4pairI5Index5IndexEEERK5ArrayIhE">
@@ -2208,12 +2498,12 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule5layerEv">
-<span id="_CPPv3N8Avogadro4Core8Molecule5layerEv"></span><span id="_CPPv2N8Avogadro4Core8Molecule5layerEv"></span><span id="Avogadro::Core::Molecule::layer"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a10149a2f7858383bbab95a0fa42eefac"></span><span class="n"><span class="pre">Layer</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">layer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule5layerEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N8Avogadro4Core8Molecule5layerEv"></span><span id="_CPPv2N8Avogadro4Core8Molecule5layerEv"></span><span id="Avogadro::Core::Molecule::layer"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a10149a2f7858383bbab95a0fa42eefac"></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_layer.html#_CPPv4N8Avogadro4Core5LayerE" title="Avogadro::Core::Layer"><span class="n"><span class="pre">Layer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">layer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule5layerEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK8Avogadro4Core8Molecule5layerEv">
-<span id="_CPPv3NK8Avogadro4Core8Molecule5layerEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule5layerEv"></span><span id="Avogadro::Core::Molecule::layerC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a2cb85ce5e497cdbd2ee687833420d812"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Layer</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">layer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule5layerEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3NK8Avogadro4Core8Molecule5layerEv"></span><span id="_CPPv2NK8Avogadro4Core8Molecule5layerEv"></span><span id="Avogadro::Core::Molecule::layerC"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a2cb85ce5e497cdbd2ee687833420d812"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="class_avogadro_1_1_core_1_1_layer.html#_CPPv4N8Avogadro4Core5LayerE" title="Avogadro::Core::Layer"><span class="n"><span class="pre">Layer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">layer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Avogadro4Core8Molecule5layerEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -2301,9 +2591,20 @@ document.write(`
 <dd></dd></dl>
 
 <dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule15m_residueLabelsE">
+<span id="_CPPv3N8Avogadro4Core8Molecule15m_residueLabelsE"></span><span id="_CPPv2N8Avogadro4Core8Molecule15m_residueLabelsE"></span><span id="Avogadro::Core::Molecule::m_residueLabels__Array:ss:"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1af9470f2d0dada2371726f09a76e9ebf5"></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_residueLabels</span></span></span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule15m_residueLabelsE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule15m_coordinates3dE">
 <span id="_CPPv3N8Avogadro4Core8Molecule15m_coordinates3dE"></span><span id="_CPPv2N8Avogadro4Core8Molecule15m_coordinates3dE"></span><span id="Avogadro::Core::Molecule::m_coordinates3d__Array:Array:Vector3::"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a3a413c573e9496c9f39939142bd43bb0"></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Vector3</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_coordinates3d</span></span></span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule15m_coordinates3dE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Store conformers/trajectories. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule12m_velocitiesE">
+<span id="_CPPv3N8Avogadro4Core8Molecule12m_velocitiesE"></span><span id="_CPPv2N8Avogadro4Core8Molecule12m_velocitiesE"></span><span id="Avogadro::Core::Molecule::m_velocities__Array:Array:Vector3::"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a14c70a0137fa9d8d078fc431a84511b8"></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Vector3</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_velocities</span></span></span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule12m_velocitiesE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Store velocities. </p>
 </dd></dl>
 
 <dl class="cpp var">
@@ -2320,6 +2621,12 @@ document.write(`
 <dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule15m_formalChargesE">
 <span id="_CPPv3N8Avogadro4Core8Molecule15m_formalChargesE"></span><span id="_CPPv2N8Avogadro4Core8Molecule15m_formalChargesE"></span><span id="Avogadro::Core::Molecule::m_formalCharges__Array:signed-c:"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a563910714ba59ff2f08e0676eba12c6a"></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">signed</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_formalCharges</span></span></span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule15m_formalChargesE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule10m_isotopesE">
+<span id="_CPPv3N8Avogadro4Core8Molecule10m_isotopesE"></span><span id="_CPPv2N8Avogadro4Core8Molecule10m_isotopesE"></span><span id="Avogadro::Core::Molecule::m_isotopes__Array:unsigned-short:"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1aa925fdd518f0e9526ff29c7805d0fc27"></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_array.html#_CPPv4I0EN8Avogadro4Core5ArrayE" title="Avogadro::Core::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">short</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_isotopes</span></span></span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule10m_isotopesE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Store isotopes of the atoms. </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule14m_forceVectorsE">
@@ -2367,6 +2674,11 @@ document.write(`
 <dd></dd></dl>
 
 <dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule17m_activeCubeIndexE">
+<span id="_CPPv3N8Avogadro4Core8Molecule17m_activeCubeIndexE"></span><span id="_CPPv2N8Avogadro4Core8Molecule17m_activeCubeIndexE"></span><span id="Avogadro::Core::Molecule::m_activeCubeIndex__Index"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a1fc2e6c4fb38160f9ac799bb7d08a6df"></span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_activeCubeIndex</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule17m_activeCubeIndexE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule10m_basisSetE">
 <span id="_CPPv3N8Avogadro4Core8Molecule10m_basisSetE"></span><span id="_CPPv2N8Avogadro4Core8Molecule10m_basisSetE"></span><span id="Avogadro::Core::Molecule::m_basisSet__BasisSetP"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1af2f2a39346b207640e37ffc94642eb59"></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_basis_set.html#_CPPv4N8Avogadro4Core8BasisSetE" title="Avogadro::Core::BasisSet"><span class="n"><span class="pre">BasisSet</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m_basisSet</span></span></span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule10m_basisSetE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
@@ -2384,6 +2696,11 @@ document.write(`
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule12m_hallNumberE">
 <span id="_CPPv3N8Avogadro4Core8Molecule12m_hallNumberE"></span><span id="_CPPv2N8Avogadro4Core8Molecule12m_hallNumberE"></span><span id="Avogadro::Core::Molecule::m_hallNumber__unsigned-short"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a615e8f96601e9fbc1a03295387c3827c"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_hallNumber</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule12m_hallNumberE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8Avogadro4Core8Molecule13m_constraintsE">
+<span id="_CPPv3N8Avogadro4Core8Molecule13m_constraintsE"></span><span id="_CPPv2N8Avogadro4Core8Molecule13m_constraintsE"></span><span id="Avogadro::Core::Molecule::m_constraints__std::vector:Core::Constraint:"></span><span class="target" id="class_avogadro_1_1_core_1_1_molecule_1a01449b8d47983800827219e91d5f6f57"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Core</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_avogadro_1_1_core_1_1_constraint.html#_CPPv4N8Avogadro4Core10ConstraintE" title="Avogadro::Core::Constraint"><span class="n"><span class="pre">Constraint</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_constraints</span></span></span><a class="headerlink" href="#_CPPv4N8Avogadro4Core8Molecule13m_constraintsE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -2457,6 +2774,18 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule8unitCellEv"><code class="docutils literal notranslate"><span class="pre">Molecule::unitCell()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule13setHallNumberEt"><code class="docutils literal notranslate"><span class="pre">Molecule::setHallNumber()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule10hallNumberEv"><code class="docutils literal notranslate"><span class="pre">Molecule::hallNumber()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule13addConstraintE4Real5Index5Index5Index5Index"><code class="docutils literal notranslate"><span class="pre">Molecule::addConstraint()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule13addConstraintER10Constraint"><code class="docutils literal notranslate"><span class="pre">Molecule::addConstraint()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule16removeConstraintE5Index5Index5Index5Index"><code class="docutils literal notranslate"><span class="pre">Molecule::removeConstraint()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule16clearConstraintsEv"><code class="docutils literal notranslate"><span class="pre">Molecule::clearConstraints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule14setConstraintsERKNSt6vectorIN4Core10ConstraintEEE"><code class="docutils literal notranslate"><span class="pre">Molecule::setConstraints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule11constraintsEv"><code class="docutils literal notranslate"><span class="pre">Molecule::constraints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule11constraintsEv"><code class="docutils literal notranslate"><span class="pre">Molecule::constraints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule13setFrozenAtomE5Indexb"><code class="docutils literal notranslate"><span class="pre">Molecule::setFrozenAtom()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule10frozenAtomE5Index"><code class="docutils literal notranslate"><span class="pre">Molecule::frozenAtom()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule14frozenAtomAxisE5Indexi"><code class="docutils literal notranslate"><span class="pre">Molecule::frozenAtomAxis()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule17setFrozenAtomAxisE5Indexib"><code class="docutils literal notranslate"><span class="pre">Molecule::setFrozenAtomAxis()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule14frozenAtomMaskEv"><code class="docutils literal notranslate"><span class="pre">Molecule::frozenAtomMask()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule8AtomTypeE"><code class="docutils literal notranslate"><span class="pre">Molecule::AtomType</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule8BondTypeE"><code class="docutils literal notranslate"><span class="pre">Molecule::BondType</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule16CustomElementMapE"><code class="docutils literal notranslate"><span class="pre">Molecule::CustomElementMap</span></code></a></li>
@@ -2487,11 +2816,16 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule16setHybridizationE5Index17AtomHybridization"><code class="docutils literal notranslate"><span class="pre">Molecule::setHybridization()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule13formalChargesEv"><code class="docutils literal notranslate"><span class="pre">Molecule::formalCharges()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule13formalChargesEv"><code class="docutils literal notranslate"><span class="pre">Molecule::formalCharges()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule11totalChargeEv"><code class="docutils literal notranslate"><span class="pre">Molecule::totalCharge()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule21totalSpinMultiplicityEv"><code class="docutils literal notranslate"><span class="pre">Molecule::totalSpinMultiplicity()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule12formalChargeE5Index"><code class="docutils literal notranslate"><span class="pre">Molecule::formalCharge()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule16setFormalChargesERKN4Core5ArrayIaEE"><code class="docutils literal notranslate"><span class="pre">Molecule::setFormalCharges()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule15setFormalChargeE5Indexa"><code class="docutils literal notranslate"><span class="pre">Molecule::setFormalCharge()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule11totalChargeEv"><code class="docutils literal notranslate"><span class="pre">Molecule::totalCharge()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule21totalSpinMultiplicityEv"><code class="docutils literal notranslate"><span class="pre">Molecule::totalSpinMultiplicity()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule8isotopesEv"><code class="docutils literal notranslate"><span class="pre">Molecule::isotopes()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule8isotopesEv"><code class="docutils literal notranslate"><span class="pre">Molecule::isotopes()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule7isotopeE5Index"><code class="docutils literal notranslate"><span class="pre">Molecule::isotope()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule11setIsotopesERKN4Core5ArrayItEE"><code class="docutils literal notranslate"><span class="pre">Molecule::setIsotopes()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule10setIsotopeE5Indext"><code class="docutils literal notranslate"><span class="pre">Molecule::setIsotope()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule6colorsEv"><code class="docutils literal notranslate"><span class="pre">Molecule::colors()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule6colorsEv"><code class="docutils literal notranslate"><span class="pre">Molecule::colors()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule5colorE5Index"><code class="docutils literal notranslate"><span class="pre">Molecule::color()</span></code></a></li>
@@ -2543,10 +2877,15 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule4cubeE5Index"><code class="docutils literal notranslate"><span class="pre">Molecule::cube()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule9cubeCountEv"><code class="docutils literal notranslate"><span class="pre">Molecule::cubeCount()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule10clearCubesEv"><code class="docutils literal notranslate"><span class="pre">Molecule::clearCubes()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule18setActiveCubeIndexE5Index"><code class="docutils literal notranslate"><span class="pre">Molecule::setActiveCubeIndex()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule15activeCubeIndexEv"><code class="docutils literal notranslate"><span class="pre">Molecule::activeCubeIndex()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule10activeCubeEv"><code class="docutils literal notranslate"><span class="pre">Molecule::activeCube()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule10activeCubeEv"><code class="docutils literal notranslate"><span class="pre">Molecule::activeCube()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule5cubesEv"><code class="docutils literal notranslate"><span class="pre">Molecule::cubes()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule5cubesEv"><code class="docutils literal notranslate"><span class="pre">Molecule::cubes()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule7formulaERKNSt6stringEi"><code class="docutils literal notranslate"><span class="pre">Molecule::formula()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule4massEv"><code class="docutils literal notranslate"><span class="pre">Molecule::mass()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule16monoisotopicMassEv"><code class="docutils literal notranslate"><span class="pre">Molecule::monoisotopicMass()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule16centerOfGeometryEv"><code class="docutils literal notranslate"><span class="pre">Molecule::centerOfGeometry()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule12centerOfMassEv"><code class="docutils literal notranslate"><span class="pre">Molecule::centerOfMass()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule6radiusEv"><code class="docutils literal notranslate"><span class="pre">Molecule::radius()</span></code></a></li>
@@ -2566,11 +2905,15 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule28perceiveBondsFromResidueDataEv"><code class="docutils literal notranslate"><span class="pre">Molecule::perceiveBondsFromResidueData()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule18perceiveBondOrdersEv"><code class="docutils literal notranslate"><span class="pre">Molecule::perceiveBondOrders()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule26perceiveSubstitutedCationsEv"><code class="docutils literal notranslate"><span class="pre">Molecule::perceiveSubstitutedCations()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule17coordinate3dCountEv"><code class="docutils literal notranslate"><span class="pre">Molecule::coordinate3dCount()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule17coordinate3dCountEv"><code class="docutils literal notranslate"><span class="pre">Molecule::coordinate3dCount()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule15setCoordinate3dEi"><code class="docutils literal notranslate"><span class="pre">Molecule::setCoordinate3d()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule12coordinate3dEi"><code class="docutils literal notranslate"><span class="pre">Molecule::coordinate3d()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule15setCoordinate3dERK5ArrayI7Vector3Ei"><code class="docutils literal notranslate"><span class="pre">Molecule::setCoordinate3d()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule12coordinate3dE6size_t"><code class="docutils literal notranslate"><span class="pre">Molecule::coordinate3d()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule15setCoordinate3dERK5ArrayI7Vector3E6size_t"><code class="docutils literal notranslate"><span class="pre">Molecule::setCoordinate3d()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule17clearCoordinate3dEv"><code class="docutils literal notranslate"><span class="pre">Molecule::clearCoordinate3d()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule18estimateVelocitiesEv"><code class="docutils literal notranslate"><span class="pre">Molecule::estimateVelocities()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule10velocitiesEi"><code class="docutils literal notranslate"><span class="pre">Molecule::velocities()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule13setVelocitiesERK5ArrayI7Vector3Ei"><code class="docutils literal notranslate"><span class="pre">Molecule::setVelocities()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule15clearVelocitiesEv"><code class="docutils literal notranslate"><span class="pre">Molecule::clearVelocities()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule11setTimeStepEdi"><code class="docutils literal notranslate"><span class="pre">Molecule::setTimeStep()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule8timeStepEiRb"><code class="docutils literal notranslate"><span class="pre">Molecule::timeStep()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule12forceVectorsEv"><code class="docutils literal notranslate"><span class="pre">Molecule::forceVectors()</span></code></a></li>
@@ -2581,9 +2924,14 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule10addResidueERNSt6stringER5IndexRc"><code class="docutils literal notranslate"><span class="pre">Molecule::addResidue()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule10addResidueER7Residue"><code class="docutils literal notranslate"><span class="pre">Molecule::addResidue()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule7residueE5Index"><code class="docutils literal notranslate"><span class="pre">Molecule::residue()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule7residueE5Index"><code class="docutils literal notranslate"><span class="pre">Molecule::residue()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule8residuesEv"><code class="docutils literal notranslate"><span class="pre">Molecule::residues()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule8residuesEv"><code class="docutils literal notranslate"><span class="pre">Molecule::residues()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule12residueCountEv"><code class="docutils literal notranslate"><span class="pre">Molecule::residueCount()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule12residueLabelE5Index"><code class="docutils literal notranslate"><span class="pre">Molecule::residueLabel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule15setResidueLabelE5IndexRKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">Molecule::setResidueLabel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule13residueLabelsEv"><code class="docutils literal notranslate"><span class="pre">Molecule::residueLabels()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule16setResidueLabelsERKN4Core5ArrayINSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">Molecule::setResidueLabels()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule9atomCountEv"><code class="docutils literal notranslate"><span class="pre">Molecule::atomCount()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule9atomCountEh"><code class="docutils literal notranslate"><span class="pre">Molecule::atomCount()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule9bondCountEv"><code class="docutils literal notranslate"><span class="pre">Molecule::bondCount()</span></code></a></li>
@@ -2601,11 +2949,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule9bondOrderE5Index"><code class="docutils literal notranslate"><span class="pre">Molecule::bondOrder()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule16setAtomicNumbersERKN4Core5ArrayIhEE"><code class="docutils literal notranslate"><span class="pre">Molecule::setAtomicNumbers()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule15setAtomicNumberE5Indexh"><code class="docutils literal notranslate"><span class="pre">Molecule::setAtomicNumber()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule13setFrozenAtomE5Indexb"><code class="docutils literal notranslate"><span class="pre">Molecule::setFrozenAtom()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule10frozenAtomE5Index"><code class="docutils literal notranslate"><span class="pre">Molecule::frozenAtom()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule17setFrozenAtomAxisE5Indexib"><code class="docutils literal notranslate"><span class="pre">Molecule::setFrozenAtomAxis()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule14frozenAtomMaskEv"><code class="docutils literal notranslate"><span class="pre">Molecule::frozenAtomMask()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule11compositionEv"><code class="docutils literal notranslate"><span class="pre">Molecule::composition()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule18formulaCompositionEv"><code class="docutils literal notranslate"><span class="pre">Molecule::formulaComposition()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule12getAtomBondsE5Index"><code class="docutils literal notranslate"><span class="pre">Molecule::getAtomBonds()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK8Avogadro4Core8Molecule13getAtomOrdersE5Index"><code class="docutils literal notranslate"><span class="pre">Molecule::getAtomOrders()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule11removeBondsE5Index"><code class="docutils literal notranslate"><span class="pre">Molecule::removeBonds()</span></code></a></li>
@@ -2627,10 +2972,13 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule13m_positions3dE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_positions3d</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule12m_atomLabelsE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_atomLabels</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule12m_bondLabelsE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_bondLabels</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule15m_residueLabelsE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_residueLabels</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule15m_coordinates3dE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_coordinates3d</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule12m_velocitiesE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_velocities</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule11m_timestepsE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_timesteps</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule16m_hybridizationsE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_hybridizations</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule15m_formalChargesE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_formalCharges</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule10m_isotopesE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_isotopes</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule14m_forceVectorsE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_forceVectors</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule8m_colorsE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_colors</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule22m_vibrationFrequenciesE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_vibrationFrequencies</span></code></a></li>
@@ -2640,10 +2988,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule15m_selectedAtomsE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_selectedAtoms</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule8m_meshesE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_meshes</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule7m_cubesE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_cubes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule17m_activeCubeIndexE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_activeCubeIndex</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule10m_basisSetE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_basisSet</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule10m_unitCellE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_unitCell</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule10m_residuesE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_residues</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule12m_hallNumberE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_hallNumber</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule13m_constraintsE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_constraints</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8Avogadro4Core8Molecule16m_frozenAtomMaskE"><code class="docutils literal notranslate"><span class="pre">Molecule::m_frozenAtomMask</span></code></a></li>
 </ul>
 </li>
@@ -2688,7 +3038,7 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item">          <p>
-            ©2025 The OpenChemistry / Avogadro Teams 
+            ©2026 The OpenChemistry / Avogadro Teams 
           </p>
           <p>Covered by the <a href="https://github.com/openchemistry/avogadrolibs/blob/master/CODE_OF_CONDUCT.md">Avogadro Code of Conduct</a>.
           </p></div>

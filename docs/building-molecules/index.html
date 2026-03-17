@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Building Molecules &#8212; Avogadro 1.100.0 documentation</title>
+    <title>Building Molecules &#8212; Avogadro 1.103.0 documentation</title>
   
   
   
@@ -33,13 +33,14 @@
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ee427ece" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mermaid-theme.css?v=7f85688a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=d87f2dab"></script>
+    <script src="../../_static/documentation_options.js?v=4a00f340"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -55,8 +56,8 @@
     <link rel="canonical" href="https://two.avogadro.cc/docs/building-molecules/index.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Importing Molecules by Name" href="importing-molecules-by-name.html" />
-    <link rel="prev" title="Extensions Menu" href="../menus/extensions-menu.html" />
+    <link rel="next" title="Drawing Molecules" href="drawing-molecules.html" />
+    <link rel="prev" title="Saving Files" href="../getting-started/saving-files.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -136,11 +137,9 @@
       
     
     
-    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt=""/>
-    <script>document.write(`<img src="../../_static/avogadro2.png" class="logo__image only-dark" alt=""/>`);</script>
+    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt="Avogadro Documentation- Home"/>
+    <script>document.write(`<img src="../../_static/avogadro2-dark.png" class="logo__image only-dark" alt="Avogadro Documentation- Home"/>`);</script>
   
-  
-    <p class="title logo__title">Avogadro</p>
   
 </a></div>
     
@@ -436,21 +435,21 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../whats-new-in-avogadro-2/index.html">What’s New in Avogadro 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../menus/index.html">Menus</a></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Building Molecules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="drawing-molecules.html">Drawing Molecules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="importing-molecules-by-name.html">Importing Molecules by Name</a></li>
 <li class="toctree-l2"><a class="reference internal" href="importing-from-the-pdb.html">Importing from the Protein Data Bank (PDB)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="insert-fragments.html">Insert Molecular Fragments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="building-with-smiles.html">Building with SMILES</a></li>
 <li class="toctree-l2"><a class="reference internal" href="building-dna-rna.html">Building DNA or RNA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="building-peptides.html">Building Peptides</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../building-materials/index.html">Building Materials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../optimizing-geometry/index.html">Optimizing Geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../display-types/index.html">Display Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extensions/index.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimizing-geometry/index.html">Optimizing Geometry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings/index.html">Settings</a></li>
 </ul>
 </div>
 </nav></div>
@@ -510,18 +509,41 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="building-molecules">
 <span id="id1"></span><h1>Building Molecules<a class="headerlink" href="#building-molecules" title="Link to this heading">#</a></h1>
+<p>A key task in Avogadro is building and editing molecules for visualization and simulations. There are several ways to do this, from downloading over the network to free-form drawing and building complex DNA and peptides.</p>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Building Molecules</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="importing-molecules-by-name.html">Importing Molecules by Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drawing-molecules.html">Drawing Molecules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="drawing-molecules.html#creating-carbon-dioxide">Creating carbon dioxide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drawing-molecules.html#see-also">See Also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="importing-molecules-by-name.html">Importing Molecules by Name</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="importing-molecules-by-name.html#see-also">See Also</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="importing-from-the-pdb.html">Importing from the Protein Data Bank (PDB)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="importing-from-the-pdb.html#importing-directly">Importing Directly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="importing-from-the-pdb.html#reading-a-downloaded-pdb-file">Reading a Downloaded PDB file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="importing-from-the-pdb.html#see-also">See Also</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="insert-fragments.html">Insert Molecular Fragments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="building-with-smiles.html">Building with SMILES</a></li>
-<li class="toctree-l1"><a class="reference internal" href="building-dna-rna.html">Building DNA or RNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="insert-fragments.html">Insert Molecular Fragments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="insert-fragments.html#see-also">See Also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="building-with-smiles.html">Building with SMILES</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="building-with-smiles.html#see-also">See Also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="building-dna-rna.html">Building DNA or RNA</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="building-dna-rna.html#see-also">See Also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="building-peptides.html">Building Peptides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="building-peptides.html#see-also">See Also</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
@@ -537,20 +559,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../menus/extensions-menu.html"
+       href="../getting-started/saving-files.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Extensions Menu</p>
+        <p class="prev-next-title">Saving Files</p>
       </div>
     </a>
     <a class="right-next"
-       href="importing-molecules-by-name.html"
+       href="drawing-molecules.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Importing Molecules by Name</p>
+        <p class="prev-next-title">Drawing Molecules</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -602,7 +624,7 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item">          <p>
-            ©2025 The OpenChemistry / Avogadro Teams 
+            ©2026 The OpenChemistry / Avogadro Teams 
           </p>
           <p>Covered by the <a href="https://github.com/openchemistry/avogadrolibs/blob/master/CODE_OF_CONDUCT.md">Avogadro Code of Conduct</a>.
           </p></div>

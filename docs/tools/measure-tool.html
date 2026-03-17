@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Measure Tool &#8212; Avogadro 1.100.0 documentation</title>
+    <title>Measure Tool &#8212; Avogadro 1.103.0 documentation</title>
   
   
   
@@ -33,13 +33,14 @@
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ee427ece" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mermaid-theme.css?v=7f85688a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=d87f2dab"></script>
+    <script src="../../_static/documentation_options.js?v=4a00f340"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -56,7 +57,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Animation Tool" href="animation-tool.html" />
-    <link rel="prev" title="Bond-Centric Manipulation Tool" href="bond-centric-manipulation-tool.html" />
+    <link rel="prev" title="AutoOptimization Tool" href="autoopt-tool.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -136,11 +137,9 @@
       
     
     
-    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt=""/>
-    <script>document.write(`<img src="../../_static/avogadro2.png" class="logo__image only-dark" alt=""/>`);</script>
+    <img src="../../_static/avogadro2.png" class="logo__image only-light" alt="Avogadro Documentation- Home"/>
+    <script>document.write(`<img src="../../_static/avogadro2-dark.png" class="logo__image only-dark" alt="Avogadro Documentation- Home"/>`);</script>
   
-  
-    <p class="title logo__title">Avogadro</p>
   
 </a></div>
     
@@ -436,26 +435,26 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../whats-new-in-avogadro-2/index.html">What’s New in Avogadro 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building-molecules/index.html">Building Molecules</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Tools</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="navigation-tool.html">Navigation Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="draw-tool.html">Draw Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="template-tool.html">Template Tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="label-tool.html">Label Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="selection-tool.html">Selection Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manipulation-tool.html">Manipulation Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bond-centric-manipulation-tool.html">Bond-Centric Manipulation Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoopt-tool.html">AutoOptimization Tool</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Measure Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="animation-tool.html">Animation Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="align-tool.html">Align Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="label-tool.html">Label Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard-shortcuts.html">Keyboard Shortcuts</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../menus/index.html">Menus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../building-molecules/index.html">Building Molecules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../building-materials/index.html">Building Materials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../optimizing-geometry/index.html">Optimizing Geometry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../display-types/index.html">Display Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extensions/index.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimizing-geometry/index.html">Optimizing Geometry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings/index.html">Settings</a></li>
 </ul>
 </div>
 </nav></div>
@@ -517,23 +516,25 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="measure-tool">
-<h1>Measure Tool<a class="headerlink" href="#measure-tool" title="Link to this heading">#</a></h1>
+<span id="tools-measure-tool"></span><h1>Measure Tool<a class="headerlink" href="#measure-tool" title="Link to this heading">#</a></h1>
 <p><img alt="The icon of the Measure Tool in light mode." src="../../_images/icon_measure.svg" /></p>
 <p>Keyboard shortcut: <kbd>Ctrl</kbd>+<kbd>8</kbd></p>
-<p>The measure tool determines bond lengths, angles, and dihedrals.</p>
-<p><img alt="" src="../../_images/0b676e91-6deb-4eaa-8b5f-46774243643b.png" /></p>
-<p>The measure tool allows you to select and assess up to four atoms.</p>
-<p><img alt="" src="../../_images/f0834455-f16b-4392-8ff4-5bf434c1dd63.png" /></p>
-<p>As you click on atoms Avogadro will automatically calculate the distances between atoms in a respective order.
-For example, the distance between atom 1 and 2 is 1.376 Å (displayed below).</p>
-<p><img alt="" src="../../_images/6adb2241-2518-4a8e-a015-cbb087d4b0f1.png" /></p>
-<p>Avogadro will also determine the angle between atoms, if at least three atoms have been selected.
-The second atom is used as the vertex.</p>
-<p><img alt="" src="../../_images/6adb2241-2518-4a8e-a015-cbb087d4b0f1-1.png" /></p>
-<p>If four atoms are selected, a dihedral angle is determined.</p>
-<p><img alt="" src="../../_images/6adb2241-2518-4a8e-a015-cbb087d4b0f1-2.png" /></p>
-<p>Right clicking the display will reset the atoms previously selected.</p>
-<p><img alt="" src="../../_images/79085e4b-2688-40b5-a07c-57b0f58f87a6.png" /></p>
+<p>The measure tool determines bond lengths, angles, and dihedrals. It allows you to select and assess up to four atoms.</p>
+<p>As you click on atoms Avogadro will automatically calculate the distances between atoms in a respective order.</p>
+<p>For example, the distance between atom 1 and 2 is 1.090 Å (displayed below).</p>
+<p><img alt="" src="../../_images/measure-12.png" /></p>
+<p>Avogadro will also determine the angle between atoms, if at least three atoms have been selected, as well as indicating the distance between atoms 2 and 3.</p>
+<p>The second atom is used as the vertex (e.g., atoms 1-2-3 = 109.476°)</p>
+<p><img alt="" src="../../_images/measure-123.png" /></p>
+<p>If four atoms are selected, a dihedral angle is determined (e.g. 149.981° for atoms 1-2-3-4), as well as the 2-3-4 angle, and the 3-4 distance.</p>
+<p><img alt="" src="../../_images/measure-1234.png" /></p>
+<p>Clicking on an atom will remove it from the list, or double clicking the display will reset the atoms previously selected.</p>
+<section id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="bond-centric-manipulation-tool.html#tools-bond-centric-manipulation-tool"><span class="std std-ref">Bond-Centric Manipulation Tool</span></a> – Adjust bond lengths and angles interactively</p></li>
+</ul>
+</section>
 </section>
 
 
@@ -547,12 +548,12 @@ The second atom is used as the vertex.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="bond-centric-manipulation-tool.html"
+       href="autoopt-tool.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Bond-Centric Manipulation Tool</p>
+        <p class="prev-next-title">AutoOptimization Tool</p>
       </div>
     </a>
     <a class="right-next"
@@ -573,6 +574,18 @@ The second atom is used as the vertex.</p>
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#see-also">See Also</a></li>
+</ul>
+  </nav></div>
 
   <div class="sidebar-secondary-item">
 
@@ -612,7 +625,7 @@ The second atom is used as the vertex.</p>
     <div class="footer-items__start">
       
         <div class="footer-item">          <p>
-            ©2025 The OpenChemistry / Avogadro Teams 
+            ©2026 The OpenChemistry / Avogadro Teams 
           </p>
           <p>Covered by the <a href="https://github.com/openchemistry/avogadrolibs/blob/master/CODE_OF_CONDUCT.md">Avogadro Code of Conduct</a>.
           </p></div>
